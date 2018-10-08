@@ -1,0 +1,606 @@
+﻿<link rel="stylesheet" type="text/css" href="css/hospital.css"/>
+
+<!--동물,지역 선택 부분 <div id="select-section"> -->
+<section class="one-section" style="margin-top: 50px;">
+	<h3 class="one-section-title">병원선택</h3>
+	<section class="box-area">
+		<h4 class="select-animal-title"> 동물선택</h4>
+		<ul class="animal-list">
+			<li data-type="0">전체</li>
+			<li data-type="1">햄스터</li>
+			<li data-type="2">고슴도치</li>
+			<li data-type="3">앵무새</li>
+			<li data-type="4">토끼</li>
+			<li data-type="5">거북이</li>
+			<li data-type="6">패럿</li>
+		</ul>
+
+		<h4 class="select-local-title">지역선택</h4>
+
+		<ul class="local-list">
+			<li data-type="-1">전체</li>
+			<li data-type="0">서울</li>
+			<li data-type="1">경기</li>
+			<li data-type="2">인천</li>
+			<li data-type="3">강원</li>
+			<li data-type="4">대전</li>
+			<li data-type="5">세종</li>
+			<li data-type="6">충남</li>
+			<li data-type="7">충북</li>
+			<li data-type="8">부산</li>
+			<li data-type="9">울산</li>
+			<li data-type="10">경남</li>
+			<li data-type="11">경북</li>
+			<li data-type="12">대구</li>
+			<li data-type="13">광주</li>
+			<li data-type="14">전남</li>
+			<li data-type="15">전북</li>
+			<li data-type="16">제주</li>
+		</ul>
+
+		<ul id="subLocalList" class="sub-local-list" style="display: none;"></ul>
+	</section>
+</section>
+
+<button class="search-bt" type="button" onclick="search()">검색</button>
+
+<section class="one-section" style="margin-top: 50px;">
+	<h3 class="one-section-title">검색결과</h3>
+
+	<section class="box-area" style="text-align: center;">
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img">안양비산동물병원</div>
+					<p class="item-like">
+						<span class="like">♥</span>
+						<span>57</span>
+					</p>
+				</div>
+				<div class="item-bottom">
+					<div class="desc">
+						<span class="desc-label">이름</span>
+						<span class="desc-value">안양비산동물병원</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">주소</span>
+						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+					</div>
+					<div class="desc">
+						<span class="desc-label">번호</span>
+						<span class="desc-value">031-446-6575</span>
+					</div>
+					<br/>
+					<div class="desc">
+						<span class="desc-label">대상</span>
+						<span class="desc-value">
+					<ul class="animal-type-list">
+						<li>
+							<i class="animal-type animal-type-1"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-2"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-3"></i>
+						</li>
+						<li>
+							<i class="animal-type animal-type-4"></i>
+						</li>
+					</ul>
+					</span>
+					</div>
+				</div>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+	</section>
+</section>
+
+<script type="text/javascript" src="js/hospital.js"></script>

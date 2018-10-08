@@ -1,0 +1,141 @@
+﻿.hospital-detail-area {
+	border: 1px solid #CCC;
+	padding: 20px;
+	margin-top: 50px;
+	display: inline-block;
+	width: 100%;
+}
+
+.detail-title {
+	text-align: center;
+	margin-bottom: 0;
+	font-size: 30px;
+	color: #333;
+}
+
+.title-bottom-div {
+	border-bottom: 1px solid #666;
+	display: inline-block;
+	width: 100%;
+}
+
+.title-bottom-div > .option {
+	float: right;
+	margin-right: 15px;
+	font-size: 14px;
+}
+
+.option > span.number {
+	font-weight: 700;
+	color: #6d7b2b;
+}
+
+button.detail-scrap-button {
+	left: 0;
+	display: inline-block;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+button.detail-scrap-button:hover {
+	opacity: 0.7;
+}
+
+.detail-info {
+	display: inline-block;
+	width: 100%;
+}
+
+.detail-info > .info-left {
+	display: inline-block;
+	width: 35%;
+	float: left;
+}
+
+.detail-info > .info-right {
+	display: inline-block;
+	width: 65%;
+	float: left;
+}
+
+.detail-img {
+	width: 100%;
+}
+
+.detail-table {
+	width: 100%;
+	padding-left: 30px;
+	line-height: 35px;
+}
+
+.detail-label {
+	font-weight: 700;
+	font-size: 20px;
+	color: #7B943B;
+	text-align: right;
+	padding-right: 30px;
+	vertical-align: top;
+}
+
+p.desc {
+	margin: 0;
+}
+
+hr.detail-hr {
+	background: none;
+	border: none;
+	border-bottom: 1px #999 dotted;
+}
+
+.detail-area-left {
+	width: 15%;
+	height: 250px;
+	vertical-align: top;
+	float: left;
+	font-weight: 700;
+	font-size: 20px;
+	color: #7B943B;
+	padding-left: 10px;
+}
+
+.detail-area-right {
+	width: 85%;
+	height: 300px;
+	vertical-align: top;
+	float: left;
+	box-sizing: border-box;
+}
+
+a {
+	color : #7B943B;
+}
+
+.detail-board {
+	width: 100%;
+	text-align: center;
+}
+
+.detail-board td, .detail-board th {
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+
+.detail-board td:first-child, .detail-board th:first-child  {
+	border-left: 1px solid #CCC;
+}
+.detail-board th {
+	color: #7B943B;
+	border-top: 1px solid #CCC;
+}
+
+.board-link {
+	color: black;
+}
+
+.board-link:hover {
+	text-decoration: underline;
+}
+
+.detail-area {
+	padding: 20px 0;
+}
