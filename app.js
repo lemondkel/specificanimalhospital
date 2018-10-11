@@ -7,20 +7,19 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-/*
 var Sequelize = require('sequelize');
-var db = require(rootPath + '/routes/config/db').info;
-var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);*/
-//
-// var userDao = require(rootPath + '/routes/dao/User');
-// var hospitalDao = require(rootPath + '/routes/dao/Hospital');
-// var shopDao = require(rootPath + '/routes/dao/Shop');
-// var boardDao = require(rootPath + '/routes/dao/Board');
-//
-// const User = sequelize.define('User', userDao.info, userDao.desc);
-// const Hospital = sequelize.define('Hospital', hospitalDao.info, hospitalDao.desc);
-// const Shop = sequelize.define('Shop', shopDao.info, shopDao.desc);
-// const Board = sequelize.define('Board', boardDao.info, boardDao.desc);
+var db = require(rootPath + '/routes/config/db/db').info;
+var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
+
+var userDao = require(rootPath + '/routes/config/dao/User');
+var hospitalDao = require(rootPath + '/routes/config/dao/Hospital');
+var shopDao = require(rootPath + '/routes/config/dao/Shop');
+var boardDao = require(rootPath + '/routes/config/dao/Board');
+
+const User = sequelize.define('User', userDao.info, userDao.desc);
+const Hospital = sequelize.define('Hospital', hospitalDao.info, hospitalDao.desc);
+const Shop = sequelize.define('Shop', shopDao.info, shopDao.desc);
+const Board = sequelize.define('Board', boardDao.info, boardDao.desc);
 
 var index = require('./routes/index');
 var user = require('./routes/user');

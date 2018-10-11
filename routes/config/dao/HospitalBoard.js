@@ -10,15 +10,14 @@ module.exports = {
 			primaryKey: true,
 			autoIncrement: true
 		},
-		title: {
-			type: Sequelize.STRING(100),
-			defaultValue: "제목이 입력되지 않았습니다."
-		},
-		animals: {
+		user_id: {
 			type: Sequelize.STRING(50)
 		},
-		site : {
-			type: Sequelize.STRING(200)
+		star: {
+			type: Sequelize.INTEGER
+		},
+		text: {
+			type: Sequelize.STRING(500)
 		},
 		createdAt: {
 			type: Sequelize.DATE,

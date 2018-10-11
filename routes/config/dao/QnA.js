@@ -10,30 +10,15 @@ module.exports = {
 			primaryKey: true,
 			autoIncrement: true
 		},
+		user_id: {
+			type: Sequelize.STRING(50)
+		},
 		title: {
 			type: Sequelize.STRING(100),
 			defaultValue: "제목이 입력되지 않았습니다."
 		},
-		animals: {
-			type: Sequelize.STRING(50)
-		},
-		contract: {
-			type: Sequelize.STRING(50)
-		},
-		address: {
-			type: Sequelize.STRING(1000)
-		},
-		time_weekday: {
-			type: Sequelize.STRING(50)
-		},
-		time_holiday: {
-			type: Sequelize.STRING(50)
-		},
-		time_closed: {
-			type: Sequelize.STRING(50)
-		},
-		site : {
-			type: Sequelize.STRING(200)
+		text: {
+			type: Sequelize.STRING(500)
 		},
 		createdAt: {
 			type: Sequelize.DATE,
