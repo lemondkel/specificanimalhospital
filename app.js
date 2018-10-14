@@ -12,18 +12,46 @@ var db = require(rootPath + '/routes/config/db/db').info;
 var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
 
 var userDao = require(rootPath + '/routes/config/dao/User');
+var userScrapDao = require(rootPath + '/routes/config/dao/UserScrap');
 var hospitalDao = require(rootPath + '/routes/config/dao/Hospital');
+var hospitalBoardDao = require(rootPath + '/routes/config/dao/HospitalBoard');
 var shopDao = require(rootPath + '/routes/config/dao/Shop');
-var boardDao = require(rootPath + '/routes/config/dao/Board');
+var magazineDao = require(rootPath + '/routes/config/dao/Magazine');
+var magazineLikeDao = require(rootPath + '/routes/config/dao/MagazineLike');
+var qnADao = require(rootPath + '/routes/config/dao/QnA');
+var qnAFileDao = require(rootPath + '/routes/config/dao/QnAFile');
+var qnACommentDao = require(rootPath + '/routes/config/dao/QnAComment');
+var qnAReCommentDao = require(rootPath + '/routes/config/dao/QnAReComment');
 
 const User = sequelize.define('User', userDao.info, userDao.desc);
+const UserScrap = sequelize.define('UserScrap', userScrapDao.info, userScrapDao.desc);
 const Hospital = sequelize.define('Hospital', hospitalDao.info, hospitalDao.desc);
+const HospitalBoard = sequelize.define('HospitalBoard', hospitalBoardDao.info, hospitalBoardDao.desc);
 const Shop = sequelize.define('Shop', shopDao.info, shopDao.desc);
-const Board = sequelize.define('Board', boardDao.info, boardDao.desc);
+const Magazine = sequelize.define('Magazine', magazineDao.info, magazineDao.desc);
+const MagazineLike = sequelize.define('MagazineLike', magazineLikeDao.info, magazineLikeDao.desc);
+const QnA = sequelize.define('QnA', qnADao.info, qnADao.desc);
+const QnAFile = sequelize.define('QnAFile', qnAFileDao.info, qnAFileDao.desc);
+const QnAComment = sequelize.define('QnAComment', qnACommentDao.info, qnACommentDao.desc);
+const QnAReComment = sequelize.define('QnAReComment', qnAReCommentDao.info, qnAReCommentDao.desc);
+
+User.sync();
+UserScrap.sync();
+Hospital.sync();
+HospitalBoard.sync();
+Shop.sync();
+Magazine.sync();
+MagazineLike.sync();
+QnAFile.sync();
+QnAComment.sync();
+QnAReComment.sync();
 
 var index = require('./routes/index');
 var user = require('./routes/user');
 var hospital = require('./routes/hospital');
+var magazine = require('./routes/magazine');
+
+var userProcess = require('./routes/userProcess');
 
 var app = express();
 
@@ -37,7 +65,7 @@ app.set('layout', 'layouts/layout');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
 	secret: 'ambc@!vsmkv#!&*!#EDNAnsv#!$()_*#@',
 	resave: false,
@@ -45,7 +73,8 @@ app.use(session({
 }));
 
 app.use(function (req, res, next) {
-	res.locals.user_id = req.session.user_id;
+	res.locals.userid = req.session.userid;
+	res.locals.username = req.session.username;
 
 	next();
 });
@@ -54,25 +83,27 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/', user);
-app.use('/', hospital);
+app.use('/user', user);
+app.use('/user/process', userProcess);
+app.use('/hospital', hospital);
+app.use('/magazine', magazine);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+app.use(function (req, res, next) {
+	var err = new Error('Not Found');
+	err.status = 404;
+	next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+	// set locals, only providing error in development
+	res.locals.message = err.message;
+	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+	// render the error page
+	res.status(err.status || 500);
+	res.render('error');
 });
 
 module.exports = app;

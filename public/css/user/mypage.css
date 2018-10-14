@@ -1,20 +1,55 @@
 ﻿.hospital-detail-area {
 	border: 1px solid #CCC;
-	padding: 20px;
+	padding: 10px 0;
 	margin-top: 50px;
 	display: inline-block;
-	width: 100%;
+	width: 80%;
+}
+
+.mypage-left {
+	border: 1px solid #CCC;
+	padding: 20px 0;
+	margin-top: 50px;
+	display: inline-block;
+	width: 18%;
+	margin-right: 10px;
+	vertical-align: top;
 }
 
 .detail-title {
-	text-align: center;
 	margin-bottom: 0;
-	font-size: 30px;
+	text-align: left;
+	padding-left: 40px;
+	font-family: '맑은 고딕';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
+}
+
+.detail-title span.black {
 	color: #333;
 }
 
+.user-info {
+	margin-top: 20px;
+	line-height: 27px;
+	font-size: 14px;
+	padding-left: 40px;
+}
+
+.user-info span.user-label {
+	width: 55px;
+	display: inline-block;
+	color: #7B943B;
+}
+
+.user-info p {
+	margin: 0;
+}
+
 .title-bottom-div {
-	border-bottom: 1px solid #666;
+	border-bottom: 1px solid #7B943B;
 	display: inline-block;
 	width: 100%;
 }
@@ -52,37 +87,25 @@ button.detail-scrap-button:hover {
 .detail-info {
 	display: inline-block;
 	width: 100%;
+	padding: 0 40px;
 }
 
-.detail-info > .info-left {
+.detail-info-title {
 	display: inline-block;
-	width: 35%;
-	float: left;
-}
-
-.detail-info > .info-right {
-	display: inline-block;
-	width: 65%;
-	float: left;
-}
-
-.detail-img {
-	width: 100%;
-}
-
-.detail-table {
-	width: 100%;
-	padding-left: 30px;
-	line-height: 35px;
-}
-
-.detail-label {
+	margin: 0;
 	font-weight: 700;
+	font-style: normal;
 	font-size: 20px;
 	color: #7B943B;
-	text-align: right;
-	padding-right: 30px;
-	vertical-align: top;
+}
+
+.detail-more {
+	float: right;
+	position: relative;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 18px;
+	color: #7B943B;
 }
 
 p.desc {
@@ -92,7 +115,7 @@ p.desc {
 hr.detail-hr {
 	background: none;
 	border: none;
-	border-bottom: 1px #999 dotted;
+	border-bottom: 1px #7B943B solid;
 }
 
 .detail-area-left {
@@ -112,10 +135,6 @@ hr.detail-hr {
 	vertical-align: top;
 	float: left;
 	box-sizing: border-box;
-}
-
-a {
-	color : #7B943B;
 }
 
 .detail-board {
@@ -146,4 +165,8 @@ a {
 
 .detail-area {
 	padding: 20px 0;
+}
+
+.detail-more:hover {
+	color: #1dabb8;
 }

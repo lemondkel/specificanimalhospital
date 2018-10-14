@@ -1,10 +1,10 @@
-﻿<link rel="stylesheet" type="text/css" href="css/hospital.css"/>
+﻿<link rel="stylesheet" type="text/css" href="/css/hospital/list.css"/>
 
 <!--동물,지역 선택 부분 <div id="select-section"> -->
 <section class="one-section" style="margin-top: 50px;">
 	<h3 class="one-section-title">병원선택</h3>
 	<section class="box-area">
-		<h4 class="select-animal-title"> 동물선택</h4>
+		<h4 class="select-animal-title">동물선택</h4>
 		<ul class="animal-list">
 			<li data-type="0">전체</li>
 			<li data-type="1">햄스터</li>
@@ -42,7 +42,9 @@
 	</section>
 </section>
 
-<button class="search-bt" type="button" onclick="search()">검색</button>
+<div class="search-div">
+	<button class="search-bt" type="button" onclick="search()">검색</button>
+</div>
 
 <section class="one-section" style="margin-top: 50px;">
 	<h3 class="one-section-title">검색결과</h3>
@@ -603,4 +605,4 @@
 	</section>
 </section>
 
-<script type="text/javascript" src="js/hospital.js"></script>
+<script type="text/javascript" src="/js/hospital/list.js"></script>

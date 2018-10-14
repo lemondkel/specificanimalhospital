@@ -1,0 +1,37 @@
+﻿<link rel="stylesheet" type="text/css" href="/css/user/login.css"/>
+<div class="align">
+	<div class="grid">
+
+		<form action="/" method="post" class="form login">
+
+			<div class="login__header">
+				<h3 class="login__title">특수동물 25시</h3>
+			</div>
+
+			<div class="login__body">
+				<div class="form__field">
+					<label class="form-label">아이디</label>
+					<input name="id" type="text" placeholder="아이디를 입력해주세요." required>
+				</div>
+
+				<div class="form__field">
+					<label class="form-label">비밀번호</label>
+					<input name="pw" type="password" placeholder="비밀번호를 입력해주세요." required>
+				</div>
+			</div>
+
+			<div class="login__footer">
+				<input type="button" onclick="login()" value="로그인">
+				<div class="login-option">
+					<a href="#">아이디 찾기</a>
+					<span class="separator">|</span>
+					<a href="#">비밀번호 찾기</a>
+					<span class="separator">|</span>
+					<a href="/user/join_step1">회원가입</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript" src="/js/user/login.js"></script>

@@ -8,14 +8,18 @@ var db = require('./config/db').info;
 var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
 */
 
-/* GET home page. */
-router.get('/hospital', function(req, res, next) {
-	res.render('hospital', { title: 'Express' });
+/**
+ * 병원 메인
+ */
+router.get('/list', function(req, res, next) {
+	res.render('hospital/list');
 });
 
-/* GET home page. */
-router.get('/hospital/detail/:id', function(req, res, next) {
-	res.render('hospital/detail', { title: 'Express' });
+/**
+ * 병원 상세
+ */
+router.get('/detail/:id', function(req, res, next) {
+	res.render('hospital/detail');
 });
 
 module.exports = router;

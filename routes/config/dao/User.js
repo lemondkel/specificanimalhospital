@@ -24,7 +24,7 @@ module.exports = {
 		phone: {
 			type: Sequelize.STRING(20)
 		},
-		zip_code: {
+		zipCode: {
 			type: Sequelize.STRING(20)
 		},
 		address1: {
@@ -32,6 +32,10 @@ module.exports = {
 		},
 		address2: {
 			type: Sequelize.STRING(5000)
+		},
+		acceptEmail: {
+			type: Sequelize.TINYINT(1),
+			defaultValue: false
 		},
 		createdAt: {
 			type: Sequelize.DATE,

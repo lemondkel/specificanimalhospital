@@ -1,0 +1,85 @@
+.step-area {
+	width: 550px;
+	line-height: 60px;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	color: #999999;
+	text-align: center;
+	border: 4px solid #c6e04b;
+	margin: 40px auto 0;
+}
+
+.step-area span.active {
+	color: #7B943B;
+}
+
+.join-content {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.agree-area {
+	padding-bottom: 35px;
+	border-bottom: 2px solid #a4bb38;
+	padding-top: 20px;
+}
+
+.agree-area textarea {
+	border: 1px solid #999;
+	width: 100%;
+	height: 180px;
+	margin-top: 10px;
+}
+
+.agree-area .agree-title {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
+}
+
+.agree-area .agree-all {
+	float: right;
+}
+
+.agree-check-area {
+	cursor: pointer;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+	color: #333333;
+	line-height: 27px;
+}
+
+#agreeAll {
+	margin-top: 7px;
+	margin-right: 5px;
+}
+
+.step-action {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.step-action button {
+	background-color: rgba(198, 224, 75, 0.647058823529412);
+	box-sizing: border-box;
+	border: 1px solid rgba(123, 148, 59, 1);
+	border-radius: 5px;
+	padding: 10px 40px;
+	margin: 0 8px;
+	font-family: '맑은 고딕 Bold', '맑은 고딕 Regular', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	color: #7B943B;
+	cursor: pointer;
+}
+
+.step-action button.cancel {
+	background-color: rgba(227, 236, 169, 0.4)
+}
+
+.step-action button:hover {
+	opacity: 0.7;
+}

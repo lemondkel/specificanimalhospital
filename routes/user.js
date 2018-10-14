@@ -8,14 +8,44 @@ var db = require('./config/db').info;
 var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
 */
 
-/* GET users listing. */
+/**
+ * 로그인
+ * @since 2018-10-12
+ */
 router.get('/login', function (req, res, next) {
-	res.render('login', {title: 'Express'});
+	res.render('user/login');
 });
 
-/* GET users listing. */
-router.get('/join', function (req, res, next) {
-	res.render('join', {title: 'Express'});
+/**
+ * 회원가입 스텝 1
+ * @since 2018-10-12
+ */
+router.get('/join_step1', function (req, res, next) {
+	res.render('user/join_step1');
+});
+
+/**
+ * 회원가입 스텝 2
+ * @since 2018-10-12
+ */
+router.get('/join_step2', function (req, res, next) {
+	res.render('user/join_step2');
+});
+
+/**
+ * 회원가입 스텝 3
+ * @since 2018-10-14
+ */
+router.get('/join_step3', function (req, res, next) {
+	res.render('user/join_step3');
+});
+
+/**
+ * 마이페이지
+ * @since 2018-10-14
+ */
+router.get('/mypage', function(req, res, next) {
+	res.render('user/mypage');
 });
 
 module.exports = router;

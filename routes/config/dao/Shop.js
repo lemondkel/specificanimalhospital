@@ -11,8 +11,7 @@ module.exports = {
 			autoIncrement: true
 		},
 		title: {
-			type: Sequelize.STRING(100),
-			defaultValue: "제목이 입력되지 않았습니다."
+			type: Sequelize.STRING(100)
 		},
 		animals: {
 			type: Sequelize.STRING(50)

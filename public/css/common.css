@@ -83,7 +83,6 @@ nav#top {
 nav#top ul {
 	list-style: none;
 	text-align: right;
-	padding: 10px 0;
 	max-width: 1024px;
 	margin: 0 auto;
 }
@@ -92,7 +91,10 @@ nav#top ul li {
 	display: inline;
 	text-transform: uppercase;
 	padding: 0 10px;
-	letter-spacing: 10px;
+	letter-spacing: 0;
+	line-height: 35px;
+	font-weight: 700;
+	font-size: 14px;
 }
 
 nav#top ul li a {
@@ -105,7 +107,37 @@ nav#top ul li a:hover {
 }
 
 footer {
-	margin-top: 100px;
+	border-top: 1px solid #c6e04b;
+	text-align: center;
+}
+
+footer div.footer-desc {
+	text-align: left;
+	display: inline-block;
+	margin-left: 30px;
+
+}
+
+footer div.footer-desc p {
+	margin: 0;
+	font-size: 13px;
+	color: #333333;
+	line-height: normal;
+}
+
+footer div.footer-desc p span.bold {
+	font-weight: 700;
+}
+
+footer div.footer-logo {
+	display: inline-block;
+	background: url(../images/logo.png);
+	width: 150px;
+	height: 140px;
+	background-size: 100% 100%;
+}
+
+.footer-color-area {
 	background: #c6e04b;
 	height: 50px;
 }
@@ -145,9 +177,13 @@ li.search .bar .search-input {
 	vertical-align: top;
 	height: 100%;
 	margin: 0;
-	background: brown;
+	background: #555f28;
 	letter-spacing: 0;
 	padding: 0 10px;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	color: white;
 }
 
 #hospital-main {
@@ -186,21 +222,6 @@ input {
 
 button {
 	background: #c6e04b;
-	display: inline-block;
-	padding: 10px;
-	letter-spacing: 3px;
-	text-align: center;
-	text-decoration: none;
-	color: white;
-	font-weight: bold;
-	font-size: 12pt;
-	border: 0;
-	outline: 0;
-	cursor: pointer;
-	margin: 10px;
-	align-content: center;
-	position: relative;
-	left: 50%;
 }
 
 /*------------------------------동물선택창--------------------------*/
@@ -282,13 +303,9 @@ button {
 
 }
 
-/*출처
-    1. http://thrillfighter.tistory.com/529 //select local~
-*/
-
 section.content {
 	max-width: 1024px;
-	margin: 0 auto;
+	margin: 0 auto 100px;
 }
 
 ul.animal-list, ul.local-list, ul.sub-local-list {
@@ -311,7 +328,7 @@ ul.sub-local-list li {
 	width: 17%;
 }
 
-button.search-bt:hover {
+button.search-bt:hover, button.search-button:hover {
 	opacity: 0.7;
 }
 
@@ -544,8 +561,46 @@ button.scrap-button {
 	font-weight: 700;
 	letter-spacing: 0;
 	font-size: 18px;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	color: white;
 }
 
 button.scrap-button:hover {
 	opacity: 0.7;
+}
+
+.menu-title {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
+	margin: 0;
+	line-height: 20px;
+	padding-left: 10px;
+}
+
+.menu-separator {
+	margin: 10px 0;
+	background: #c6e04b;
+	outline: none;
+	border: none;
+	height: 1px;
+}
+
+.mypage-menu-list {
+	list-style-type: none;
+	line-height: 30px;
+	margin: 20px 0;
+	padding: 0 10px;
+	font-family: '맑은 고딕';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+}
+
+.mypage-menu-list li:hover {
+	cursor: pointer;
+	color: #1dabb8;
 }

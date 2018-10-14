@@ -13,8 +13,17 @@
 
 <nav id="top">
 	<ul>
-		<li><a href="/login">LOGIN</a></li>
-		<li><a href="/join">JOIN</a></li>
+		<% if(username !== undefined) {
+		%>
+		<li><a href="/user/process/logout">LOGOUT</a></li>
+		<li><a href="/user/mypage">MYPAGE</a></li>
+		<%
+		}  else {
+		%>
+		<li><a href="/user/login">LOGIN</a></li>
+		<li><a href="/user/join_step1">JOIN</a></li>
+		<%
+		} %>
 	</ul>
 </nav>
 <header id="header">
@@ -22,8 +31,8 @@
 </header>
 <nav id="nav">
 	<ul>
-		<li><a href="/hospital">Hospital</a></li>
-		<li><a href="/magazine">Magazine</a></li>
+		<li><a href="/hospital/list">Hospital</a></li>
+		<li><a href="/magazine/list">Magazine</a></li>
 		<li><a href="/shop">Shop</a></li>
 		<li><a href="/qna">Q&A</a></li>
 		<li class="search">
@@ -41,8 +50,23 @@
 </section>
 
 <footer>
+	<div>
+		<div class="footer-logo"></div>
+		<div class="footer-desc">
+			<p><span class="bold">(주) 특수동물25시</span></p>
+			<p>주 소 | 경기도 안양시 만안구</p>
+			<br/>
+			<p>대표이사 | 양세종</p>
 
+			<p>대표전화 | 031-124-5332(발신자 부담전화)</p>
+
+			<p>팩 스 | 0502-235-9746(지역번호공통)</p>
+			<br/>
+			<p>COPYRIGHT(C) <span class="bold">SPECIAL ANIMAL CLINIC 25HOURS</span> ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+	<section class="footer-color-area"></section>
 </footer>
-
+<script type="text/javascript" src="/js/common.js"></script>
 </body>
 </html>

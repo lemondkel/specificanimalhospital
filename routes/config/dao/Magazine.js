@@ -11,28 +11,13 @@ module.exports = {
 			autoIncrement: true
 		},
 		title: {
-			type: Sequelize.STRING(100),
-			defaultValue: "제목이 입력되지 않았습니다."
+			type: Sequelize.STRING(100)
 		},
 		text: {
-			type: Sequelize.STRING(1000)
-		},
-		youtube: {
-			type: Sequelize.STRING(500)
+			type: Sequelize.STRING(2000)
 		},
 		thumbnail: {
 			type: Sequelize.STRING(500)
-		},
-		isDel: {
-			type: Sequelize.INTEGER,
-			defaultValue: 0
-		},
-		lecture_idx: {
-			type: Sequelize.INTEGER,
-			references: {
-				model: 'lectures', // 'persons' refers to table name
-				key: 'idx' // 'id' refers to column name in persons table
-			}
 		},
 		createdAt: {
 			type: Sequelize.DATE,

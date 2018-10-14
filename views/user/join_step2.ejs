@@ -1,0 +1,111 @@
+﻿<link rel="stylesheet" type="text/css" href="/css/user/join_step2.css"/>
+
+<div class="step-area">
+	<span>1. 약관동의</span>
+	<span>&gt;</span>
+	<span class="active">2. 기본정보 입력</span>
+	<span>&gt;</span>
+	<span>3. 회원가입 완료</span>
+</div>
+
+<div class="join-content">
+	<div class="agree-area">
+		<table cellpadding="0" cellspacing="0" class="join-table">
+			<tr>
+				<th>
+					<label for="id">아이디*</label>
+				</th>
+				<td>
+					<input id="id" type="text" />
+					<input type="hidden" id="idCheckVal" value="0" />
+				</td>
+				<td>
+					<button type="button" class="join-button" id="idCheck">중복확인</button>
+					<button type="button" class="join-button" id="idChange" style="display: none;">수정</button>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="pw">비밀번호*</label>
+				</th>
+				<td colspan="2">
+					<input id="pw" type="password" />
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="pwCheck">비밀번호 재확인*</label>
+				</th>
+				<td colspan="2">
+					<input id="pwCheck" type="password" />
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="name">이름*</label>
+				</th>
+				<td colspan="2">
+					<input id="name" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="nick">닉네임*</label>
+				</th>
+				<td>
+					<input id="nick" type="text" />
+					<input type="hidden" id="nickCheckVal" value="0" />
+				</td>
+				<td>
+					<button type="button" class="join-button" id="nickCheck">중복확인</button>
+					<button type="button" class="join-button" id="nickChange" style="display: none;">수정</button>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="email">이메일*</label>
+				</th>
+				<td colspan="2">
+					<input id="email" type="text" />
+					<div class="email-agree-area">
+						<input type="checkbox" id="acceptEmail" />
+						<label for="acceptEmail">이메일 이벤트 알림 수신동의 (선택)</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="phone">전화번호*</label>
+				</th>
+				<td colspan="2">
+					<input id="phone" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<label for="zip_code">주소</label>
+				</th>
+				<td colspan="2">
+					<div>
+						<input class="zip-code" id="zipCode" type="text" disabled/>
+						<button type="button" class="join-button" id="searchAddr" onclick="searchAddr()">검색</button>
+					</div>
+					<div style="margin: 5px 0;">
+						<input id="address1" type="text" disabled/>
+					</div>
+					<div style="margin: 5px 0;">
+						<input id="address2" type="text" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" style="text-align: center;">
+					<button class="confirm" type="button">회원가입</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script type="text/javascript" src="/js/user/join_step2.js"></script>

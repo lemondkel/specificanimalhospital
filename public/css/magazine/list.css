@@ -1,0 +1,62 @@
+﻿ul.animal-list li, ul.local-list li, ul.sub-local-list li {
+	float: left;
+	line-height: 40px;
+	padding: 0 10px;
+	border: 1px solid rgba(177, 206, 36, 1);
+	cursor: pointer;
+}
+
+ul.animal-list {
+	text-align: center;
+}
+
+ul.animal-list li {
+	height: auto;
+	width: 14%;
+	font-weight: 700;
+	border: 1px solid rgba(177, 206, 36, 1);
+	border-right: none;
+}
+
+ul.animal-list li:last-child {
+	border-right: 1px solid rgba(177, 206, 36, 1);
+}
+
+ul.sub-local-list li {
+	border: 0;
+	width: 17%;
+}
+
+ul.animal-list li:hover, ul.local-list li:hover, ul.sub-local-list li:hover {
+	background: #c6e04b;
+	opacity: 0.7;
+}
+
+ul.animal-list li.active, ul.local-list li.active, ul.sub-local-list li.active {
+	background: #c6e04b;
+}
+
+div.search-div {
+	text-align: center;
+	margin-top: 15px;
+}
+
+button.search-bt {
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 15px;
+	color: #FFFFFF;
+	padding: 5px 10px;
+}
+
+button.search-bt:hover {
+	opacity: 0.7;
+}
+
+.hospital-area {
+	opacity: 0.7;
+	cursor: pointer;
+}
