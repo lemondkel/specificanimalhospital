@@ -45,7 +45,72 @@ function initialize() {
 		infowindow.open(map, marker);
 	});
 
-	$('#writeBoard').on('click', function() {
+	/**
+	 * 스크랩
+	 * @since 2018-10-20
+	 */
+	$('#scrapHospital').on('click', function() {
+		$.ajax({
+			url : '/hospital/process/scrap/hospital',
+			data : {
 
+			},
+			dataType : 'json',
+			method : 'POST',
+			success : function (data) {
+				console.log(data);
+				alert(data.desc);
+				if (data.result) {
+
+				} else {
+					if(data.code !== undefined) {
+						switch (data.code) {
+							case 600:
+								window.location.href = '/user/login';
+								break;
+						}
+					}
+				}
+			}
+		})
+	});
+
+	/**
+	 * 후기작성
+	 * @since 2018-10-20
+	 */
+	$('#writeBoard').on('click', function() {
+		$.ajax({
+			url : '/hospital/process/create/board',
+			data : {
+
+			},
+			dataType : 'json',
+			method : 'POST',
+			success : function (data) {
+				console.log(data);
+				alert(data.desc);
+				if (data.result) {
+
+				} else {
+					if(data.code !== undefined) {
+						switch (data.code) {
+							case 600:
+								window.location.href = '/user/login';
+								break;
+						}
+					}
+				}
+			}
+		})
+	});
+
+	/**
+	 * 상단 사진 변경
+	 * @since 2018-10-20
+	 */
+	$('ul.sub-img-list').on('click', 'li', function () {
+		var targetImg = $(this).children('img');
+		$('.detail-img').css('background', 'url(' + targetImg.attr('src') + ')');
 	})
 }

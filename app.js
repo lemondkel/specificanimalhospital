@@ -71,6 +71,7 @@ var hospital = require('./routes/hospital');
 var magazine = require('./routes/magazine');
 
 var userProcess = require('./routes/userProcess');
+var hospitalProcess = require('./routes/hospitalProcess');
 
 var app = express();
 
@@ -105,6 +106,7 @@ app.use('/', index);
 app.use('/user', user);
 app.use('/user/process', userProcess);
 app.use('/hospital', hospital);
+app.use('/hospital/process', hospitalProcess);
 app.use('/magazine', magazine);
 
 // catch 404 and forward to error handler
