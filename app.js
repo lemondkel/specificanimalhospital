@@ -35,6 +35,24 @@ const QnAFile = sequelize.define('QnAFile', qnAFileDao.info, qnAFileDao.desc);
 const QnAComment = sequelize.define('QnAComment', qnACommentDao.info, qnACommentDao.desc);
 const QnAReComment = sequelize.define('QnAReComment', qnAReCommentDao.info, qnAReCommentDao.desc);
 
+HospitalBoard.belongsTo(Hospital, {foreignKey: "hospital_idx"});
+HospitalBoard.belongsTo(User, {foreignKey: "user_id"});
+
+MagazineLike.belongsTo(Magazine, {foreignKey: "magazine_idx"});
+MagazineLike.belongsTo(User, {foreignKey: "user_id"});
+
+QnA.belongsTo(User, {foreignKey: "user_id"});
+
+QnAComment.belongsTo(QnA, {foreignKey: "qna_idx"});
+QnAComment.belongsTo(User, {foreignKey: "user_id"});
+
+QnAFile.belongsTo(QnA, {foreignKey: "qna_idx"});
+
+QnAReComment.belongsTo(QnAComment, {foreignKey: "qna_comment_idx"});
+QnAReComment.belongsTo(User, {foreignKey: "user_id"});
+
+UserScrap.belongsTo(User, {foreignKey: "user_id"});
+
 User.sync();
 UserScrap.sync();
 Hospital.sync();
@@ -42,6 +60,7 @@ HospitalBoard.sync();
 Shop.sync();
 Magazine.sync();
 MagazineLike.sync();
+QnA.sync();
 QnAFile.sync();
 QnAComment.sync();
 QnAReComment.sync();

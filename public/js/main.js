@@ -7,6 +7,7 @@ $(document).ready(function () {
 		},
 		slidesPerView: 4,
 		speed: 500,
+		centeredSlides : true,
 		autoplay: {
 			delay: 4000
 		}

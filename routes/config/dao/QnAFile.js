@@ -10,9 +10,6 @@ module.exports = {
 			primaryKey: true,
 			autoIncrement: true
 		},
-		qna_idx: {
-			type: Sequelize.INTEGER
-		},
 		path: {
 			type: Sequelize.STRING(1000)
 		},

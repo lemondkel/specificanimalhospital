@@ -10,9 +10,6 @@ module.exports = {
 			primaryKey: true,
 			autoIncrement: true
 		},
-		user_id: {
-			type: Sequelize.STRING(50)
-		},
 		scrap_type: {
 			type: Sequelize.INTEGER
 		},

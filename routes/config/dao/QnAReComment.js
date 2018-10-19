@@ -10,12 +10,6 @@ module.exports = {
 			primaryKey: true,
 			autoIncrement: true
 		},
-		qna_comment_idx: {
-			type: Sequelize.INTEGER
-		},
-		user_id: {
-			type: Sequelize.STRING(50)
-		},
 		text: {
 			type: Sequelize.STRING(2000)
 		},

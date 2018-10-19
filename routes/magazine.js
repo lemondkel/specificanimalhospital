@@ -12,6 +12,7 @@ var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
  * 매거진 메인
  */
 router.get('/list', function(req, res, next) {
+	res.locals.menuid = 2;
 	res.render('magazine/list');
 });
 
@@ -19,6 +20,7 @@ router.get('/list', function(req, res, next) {
  * 매거진 상세
  */
 router.get('/detail/:id', function(req, res, next) {
+	res.locals.menuid = 2;
 	res.render('magazine/detail');
 });
 

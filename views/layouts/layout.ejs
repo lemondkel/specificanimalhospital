@@ -31,8 +31,20 @@
 </header>
 <nav id="nav">
 	<ul>
-		<li><a href="/hospital/list">Hospital</a></li>
-		<li><a href="/magazine/list">Magazine</a></li>
+		<li
+				<% if (menuid === 1) {
+				%>
+				class="active"
+				<%
+				}  else null %>
+		><a href="/hospital/list">Hospital</a></li>
+		<li
+				<% if (menuid === 2) {
+				%>
+				class="active"
+				<%
+				}  else null %>
+		><a href="/magazine/list">Magazine</a></li>
 		<li><a href="/shop">Shop</a></li>
 		<li><a href="/qna">Q&A</a></li>
 		<li class="search">

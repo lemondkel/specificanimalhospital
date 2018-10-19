@@ -139,7 +139,7 @@ footer div.footer-logo {
 
 .footer-color-area {
 	background: #c6e04b;
-	height: 50px;
+	height: 25px;
 }
 
 li.search {
@@ -151,11 +151,11 @@ li.search {
 }
 
 li.search .bar {
-	margin: 10px 0;
+	margin: 7px 0;
 	box-sizing: border-box;
 	vertical-align: middle;
 	display: block;
-	height: 25px;
+	height: 31px;
 	background: white;
 }
 
@@ -184,6 +184,7 @@ li.search .bar .search-input {
 	outline: 0;
 	cursor: pointer;
 	color: white;
+	font-size: 16px;
 }
 
 #hospital-main {
@@ -318,7 +319,7 @@ ul.animal-list, ul.local-list, ul.sub-local-list {
 
 ul.animal-list li, ul.local-list li, ul.sub-local-list li {
 	float: left;
-	line-height: 40px;
+	line-height: 45px;
 	padding: 0 10px;
 	cursor: pointer;
 }

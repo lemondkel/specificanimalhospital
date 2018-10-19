@@ -1,6 +1,6 @@
 ﻿ul.animal-list li, ul.local-list li, ul.sub-local-list li {
 	float: left;
-	line-height: 40px;
+	line-height: 45px;
 	padding: 0 10px;
 	border: 1px solid rgba(177, 206, 36, 1);
 	cursor: pointer;

@@ -9,7 +9,7 @@
 .detail-title {
 	text-align: center;
 	margin-bottom: 0;
-	font-size: 30px;
+	font-size: 36px;
 	color: #333;
 }
 
@@ -22,7 +22,7 @@
 .title-bottom-div > .option {
 	float: right;
 	margin-right: 15px;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .option > span.number {
@@ -108,7 +108,7 @@ hr.detail-hr {
 
 .detail-area-right {
 	width: 85%;
-	height: 300px;
+	height: 330px;
 	vertical-align: top;
 	float: left;
 	box-sizing: border-box;
