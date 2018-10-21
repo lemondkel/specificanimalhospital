@@ -339,6 +339,7 @@ button.search-bt:hover, button.search-button:hover {
 section.box-area {
 	border: 3px solid #c6e04b;
 	padding: 20px 10px;
+	width: 100%;
 	display: inline-block;
 }
 
@@ -368,6 +369,9 @@ div.hospital-item .item-top .img {
 	display: table-cell;
 	font-weight: 700;
 	font-size: 20px;
+	background-size: auto 100% !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
 }
 
 div.hospital-item .item-like {

@@ -147,9 +147,10 @@ hr.detail-hr {
 	border-right: 1px solid #CCC;
 }
 
-.detail-board td:first-child, .detail-board th:first-child  {
+.detail-board td:first-child, .detail-board th:first-child {
 	border-left: 1px solid #CCC;
 }
+
 .detail-board th {
 	color: #7B943B;
 	border-top: 1px solid #CCC;
@@ -169,4 +170,13 @@ hr.detail-hr {
 
 .detail-more:hover {
 	color: #1dabb8;
+}
+
+.hospital-item {
+	width: 31% !important;
+}
+
+.hospital-item:hover {
+	opacity: 0.7;
+	cursor: pointer;
 }

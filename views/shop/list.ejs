@@ -1,0 +1,71 @@
+﻿<link rel="stylesheet" type="text/css" href="/css/shop/list.css"/>
+
+<!--동물,지역 선택 부분 <div id="select-section"> -->
+<section class="one-section" style="margin-top: 50px;">
+	<h4 class="select-animal-title">동물선택</h4>
+	<ul class="animal-list">
+		<li class="active" data-type="0">전체</li>
+		<li data-type="1">거북이</li>
+		<li data-type="2">고슴도치</li>
+		<li data-type="3">앵무새</li>
+		<li data-type="4">토끼</li>
+		<li data-type="5">패럿</li>
+		<li data-type="6">햄스터</li>
+	</ul>
+</section>
+
+<div class="search-div">
+	<button class="search-bt" type="button" onclick="search()">검색</button>
+</div>
+
+<section class="one-section" style="margin-top: 50px;">
+	<div>
+		<h3 class="one-section-title">SHOP <span>&lt;&lt; <span id="searchName" style="color: black;">전체</span> 검색결과</span></h3>
+		<select class="search-filter">
+			<option>최신등록</option>
+			<option>조회</option>
+		</select>
+	</div>
+
+	<section class="box-area" style="text-align: center; position: relative; top: -20px;">
+		<div class="hospital-item" data-hospital-id="1">
+			<div class="hospital-area">
+				<div class="item-top">
+					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
+				</div>
+				<ul class="animal-type-list">
+					<li>
+						<i class="animal-type animal-type-1"></i>
+					</li>
+					<li>
+						<i class="animal-type animal-type-2"></i>
+					</li>
+					<li>
+						<i class="animal-type animal-type-3"></i>
+					</li>
+					<li>
+						<i class="animal-type animal-type-4"></i>
+					</li>
+					<li>
+						<i class="animal-type animal-type-5"></i>
+					</li>
+					<li>
+						<i class="animal-type animal-type-6"></i>
+					</li>
+				</ul>
+			</div>
+			<button class="scrap-button">♥ 스크랩</button>
+		</div>
+	</section>
+	<div class="pagination">
+		<span>&lt;</span>
+		<span class="active">1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<span>&gt;</span>
+	</div>
+</section>
+
+<script type="text/javascript" src="/js/shop/list.js"></script>

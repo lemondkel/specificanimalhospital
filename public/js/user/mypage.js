@@ -1,5 +1,10 @@
 $(document).ready(function () {
 	initialize();
+
+	$('.hospital-item').on('click', function () {
+		var hospitalIdx = $(this).attr('data-hospital-id');
+		window.location.href = '/hospital/detail/' + hospitalIdx;
+	})
 });
 
 function initialize() {

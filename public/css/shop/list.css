@@ -61,6 +61,49 @@ button.search-bt:hover {
 	cursor: pointer;
 }
 
+.magazine-item-title {
+	text-align: left;
+	padding-left: 01px;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
+	margin: 0;
+}
+
+.magazine-item-desc {
+	margin: 0;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+	color: #697d35;
+	text-align: left;
+	white-space: normal;
+	height: 95px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	line-height: 19px;
+}
+
+.item-bottom {
+	border-bottom: 1px solid rgba(177, 206, 36, 1);
+}
+
+.magazine-item-info {
+	font-family: '맑은 고딕 Bold', '맑은 고딕 Regular', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	color: #7B943B;
+	text-align: right;
+	font-size: 13px;
+	right: 5px;
+	position: relative;
+	padding: 2px 0;
+}
+
 .search-filter {
 	float: right;
 	position: relative;
@@ -68,4 +111,18 @@ button.search-bt:hover {
 	line-height: 30px;
 	height: 30px;
 	font-size: 16px;
+}
+
+
+ul.animal-type-list {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+ul.animal-type-list li {
+	width: 33px;
+	height: 45px;
+	float: none;
+	display: inline-block;
 }

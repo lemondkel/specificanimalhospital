@@ -56,7 +56,50 @@ button.search-bt:hover {
 	opacity: 0.7;
 }
 
-.hospital-area {
+.hospital-area:hover {
 	opacity: 0.7;
 	cursor: pointer;
+}
+
+.magazine-item-title {
+	text-align: left;
+	padding-left: 01px;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
+	margin: 0;
+}
+
+.magazine-item-desc {
+	margin: 0;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+	color: #697d35;
+	text-align: left;
+	white-space: normal;
+	height: 95px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	line-height: 19px;
+}
+
+.item-bottom {
+	border-bottom: 1px solid rgba(177, 206, 36, 1);
+}
+
+.magazine-item-info {
+	font-family: '맑은 고딕 Bold', '맑은 고딕 Regular', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	color: #7B943B;
+	text-align: right;
+	font-size: 13px;
+	right: 5px;
+	position: relative;
+	padding: 2px 0;
 }

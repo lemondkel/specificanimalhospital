@@ -25,5 +25,9 @@ module.exports = {
 			type: Sequelize.DATE,
 			defaultValue: Sequelize.NOW
 		}
+	},
+	desc : {
+		charset: 'utf8',
+		collate: 'utf8_unicode_ci'
 	}
 };

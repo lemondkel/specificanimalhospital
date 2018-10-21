@@ -10,5 +10,9 @@ module.exports = {
 			primaryKey: true,
 			autoIncrement: true
 		}
+	},
+	desc : {
+		charset: 'utf8',
+		collate: 'utf8_unicode_ci'
 	}
 };

@@ -5,7 +5,7 @@ $(document).ready(function () {
 		items: 4,
         autoplay: true,
         autoplaySpeed : 500,
-		nav :false,
+		nav : true,
         dotsEach: true
     });
 
@@ -13,11 +13,14 @@ $(document).ready(function () {
         loop:true,
         margin:10,
         items: 4,
-		autoplay: true,
-        autoplaySpeed : 500,
-        nav :false,
+        nav :true,
 		dotsEach: true
     });
+
+    $('.shop-img').on('click', function () {
+		var link = $(this).parents('.item').attr('data-link');
+		window.open(link, '_blank');
+	});
 
 	getLocation();
 });

@@ -9,7 +9,10 @@ module.exports = {
 		server : {
 			host: 'localhost',
 			dialect : 'mysql',
-			port: '3307'
+			port: '3307',
+			charset: 'utf8',
+			collate: 'utf8_general_ci',
+			timestamps: true
 		}
 	}
 };

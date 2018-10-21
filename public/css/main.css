@@ -1,84 +1,141 @@
 ﻿ul.animal-list li {
-    height: 150px;
-    padding: 10px;
+	height: 150px;
+	padding: 10px;
 }
 
 .item {
-    margin: 0 1%;
-    border: 1px solid #999;
-    box-sizing: border-box;
+	margin: 0 1%;
+	border: 1px solid #999;
+	box-sizing: border-box;
 }
 
 #magazineContainer .item-top {
-    height: 160px;
+	height: 160px;
 }
 
 #magazineContainer .item-bottom {
-    padding: 5px;
-    height: auto;
+	padding: 5px;
+	height: auto;
 }
 
 #shopContainer .item-top {
-    height: 160px;
-    padding: 10px;
+	height: 160px;
+	padding: 10px;
 }
 
 #shopContainer .item-bottom {
-
-    height: 80px;
+	height: 52px;
+	border-top: 1px solid #999;
 }
 
 #magazineContainer .swiper-pagination, #shopContainer .swiper-pagination {
-    top: 5px;
-    position: relative;
+	top: 5px;
+	position: relative;
 }
 
 .magazine-img, .shop-img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .shop-img:hover {
-    opacity: 0.7;
-    cursor: pointer;
+	opacity: 0.7;
+	cursor: pointer;
 }
 
 h4.magazine-title {
-    margin: 5px 0;
-    padding: 0;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
-    color: #7B943B;
+	margin: 5px 0;
+	padding: 0;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
 }
 
 p.magazine-desc {
-    margin: 0;
-    line-height: 20px;
-    font-size: 14px;
-    color: #7B943B;
+	margin: 0;
+	line-height: 20px;
+	font-size: 14px;
+	color: #7B943B;
 }
 
 .content-area {
-    width: 100%;
-    display: inline-block;
-    padding-bottom: 50px;
+	width: 100%;
+	display: inline-block;
+	padding-bottom: 50px;
 }
 
 ul.shop-list li.item .item-top {
-    height: 200px;
-    border-bottom: 1px solid #999;
+	height: 200px;
+	border-bottom: 1px solid #999;
 }
 
 ul.animal-type-list {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
 }
 
 ul.animal-type-list li {
-    width: 37px;
-    height: 37px;
-    float: none;
-    display: inline-block;
+	width: 37px;
+	height: 52px;
+	float: none;
+	display: inline-block;
+}
+
+.owl-nav {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	height: 0;
+}
+
+.owl-prev {
+	float: left;
+	height: 100%;
+	position: relative;
+	left: -45px;
+	top: -30px;
+	font-size: 60px !important;
+	color: rgb(123, 148, 59) !important;
+}
+
+.owl-next {
+	float: right;
+	height: 100%;
+	position: relative;
+	right: -45px;
+	top: -30px;
+	font-size: 60px !important;
+	color: rgb(123, 148, 59) !important;
+}
+
+#magazineContainer .owl-next, #magazineContainer .owl-prev {
+	top: 80px;
+}
+
+#shopContainer .owl-next, #shopContainer .owl-prev {
+	top: 30px;
+}
+
+.show-more {
+	float: right;
+	top: -55px;
+	position: relative;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 18px;
+	color: #7B943B;
+	cursor: pointer;
+}
+
+.owl-carousel .owl-stage-outer {
+	width: 100%;
+	top: -30px;
+}
+
+@media (max-width: 1150px) {
+	.owl-nav {
+		display: none;
+	}
 }

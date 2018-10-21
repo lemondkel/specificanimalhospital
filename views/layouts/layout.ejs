@@ -46,7 +46,13 @@
 				<%
 				}  else null %>
 		><a href="/magazine/list">Magazine</a></li>
-		<li><a href="/shop">Shop</a></li>
+		<li
+				<% if (menuid === 4) {
+				%>
+				class="active"
+				<%
+				}  else null %>
+		><a href="/shop/list">Shop</a></li>
 		<li><a href="/qna">Q&A</a></li>
 		<li class="search">
 			<div class="bar">
