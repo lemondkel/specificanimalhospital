@@ -132,9 +132,11 @@ footer div.footer-desc p span.bold {
 footer div.footer-logo {
 	display: inline-block;
 	background: url(../images/logo.png);
-	width: 150px;
-	height: 140px;
-	background-size: 100% 100%;
+	width: 120px;
+	height: 120px;
+	background-size: 100% auto;
+	vertical-align: top;
+	margin-top: 5px;
 }
 
 .footer-color-area {
