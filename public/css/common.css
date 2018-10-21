@@ -308,7 +308,8 @@ button {
 
 section.content {
 	max-width: 1024px;
-	margin: 0 auto 100px;
+	margin: 0 auto;
+	padding-bottom: 100px;
 }
 
 ul.animal-list, ul.local-list, ul.sub-local-list {
@@ -338,16 +339,18 @@ button.search-bt:hover, button.search-button:hover {
 section.box-area {
 	border: 3px solid #c6e04b;
 	padding: 20px 10px;
+	display: inline-block;
 }
 
 div.hospital-item {
 	border: 1px solid rgba(177, 206, 36, 1);
 	width: 23%;
-	margin: 20px 5px;
+	margin: 20px 1%;
 	box-sizing: border-box;
 	vertical-align: top;
 	display: inline-block;
 	padding: 0;
+	float: left;
 }
 
 div.hospital-item .item-top {
@@ -606,4 +609,17 @@ button.scrap-button:hover {
 .mypage-menu-list li:hover {
 	cursor: pointer;
 	color: #1dabb8;
+}
+
+.pagination {
+	text-align: center;
+}
+
+.pagination span:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.pagination .active {
+	font-weight: 700;
 }

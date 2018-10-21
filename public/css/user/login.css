@@ -1,3 +1,7 @@
+.content-back {
+	background-color: rgba(227, 236, 169, 0.298039215686275);
+}
+
 .align {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -68,10 +72,9 @@ input[type='submit'] {
 }
 
 .login__body {
-	background-color: #fff;
-	padding: 1.5em;
 	position: relative;
 	display: inline-block;
+	padding: 1.5em 10px 10px 1.5em;
 }
 
 .form-label {
@@ -132,7 +135,6 @@ span.separator {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background-color: #fff;
 	border-bottom-left-radius: 0.25em;
 	border-bottom-right-radius: 0.25em;
 	display: block;
@@ -148,4 +150,23 @@ span.separator {
 
 .login__footer p {
 	margin: 0;
+}
+
+.login-button {
+	width: 300px;
+	line-height: 40px;
+	height: 40px;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 18px;
+	color: #000000;
+	background-color: rgba(198, 224, 75, 1);
+	box-sizing: border-box;
+	border: 1px solid rgba(119, 119, 119, 1);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.login-button:hover {
+	opacity: 0.7;
 }
