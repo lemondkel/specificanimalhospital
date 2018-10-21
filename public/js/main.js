@@ -1,30 +1,23 @@
 $(document).ready(function () {
-	var magazineSwiper = new Swiper('#magazineContainer', {
-		direction: 'horizontal',
-		loop: true,
-		pagination: {
-			el: '#magazinePagination'
-		},
-		slidesPerView: 4,
-		speed: 500,
-		centeredSlides : true,
-		autoplay: {
-			delay: 4000
-		}
-	}); // 매거진 회전영역
+    $('#magazineContainer').owlCarousel({
+        loop:true,
+        margin:10,
+		items: 4,
+        autoplay: true,
+        autoplaySpeed : 500,
+		nav :false,
+        dotsEach: true
+    });
 
-	var shopSwiper = new Swiper('#shopContainer', {
-		direction: 'horizontal',
-		loop: true,
-		pagination: {
-			el: '#shopPagination'
-		},
-		slidesPerView: 4,
-		speed: 500,
-		autoplay: {
-			delay: 4000
-		}
-	}); // SHOP 회전영역
+    $('#shopContainer').owlCarousel({
+        loop:true,
+        margin:10,
+        items: 4,
+		autoplay: true,
+        autoplaySpeed : 500,
+        nav :false,
+		dotsEach: true
+    });
 
 	getLocation();
 });
