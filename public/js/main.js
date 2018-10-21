@@ -3,14 +3,20 @@ $(document).ready(function () {
         loop:true,
         margin:10,
 		items: 4,
-		nav :false
+        autoplay: true,
+        autoplaySpeed : 500,
+		nav :false,
+        dotsEach: true
     });
 
     $('#shopContainer').owlCarousel({
         loop:true,
         margin:10,
         items: 4,
-        nav :false
+		autoplay: true,
+        autoplaySpeed : 500,
+        nav :false,
+		dotsEach: true
     });
 
 	getLocation();
