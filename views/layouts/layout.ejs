@@ -53,7 +53,13 @@
 				<%
 				}  else null %>
 		><a href="/shop/list">Shop</a></li>
-		<li><a href="/qna">Q&A</a></li>
+		<li
+				<% if (menuid === 5) {
+				%>
+				class="active"
+				<%
+				}  else null %>
+		><a href="/qna/list">Q&A</a></li>
 		<li class="search">
 			<div class="bar">
 				<input id="searchBar" class="search-input" type="text"/>

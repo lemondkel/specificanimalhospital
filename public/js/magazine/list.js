@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	setAnimalTab(); // 동물 선택 탭을 설정합니다.
 	setLocalTab(); // 지역 선택 탭을 설정합니다.
 	setSubLocalClickEvent(); // 서브 지역 클릭 이벤트를 설정합니다.
 
-	$('.hospital-area').on('click', function() {
+	$('.hospital-area').on('click', function () {
 		var hospitalId = parseInt($(this).parent().attr('data-hospital-id'));
 
 		window.location.href = '/hospital/detail/' + hospitalId;
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 function setSubLocalClickEvent() {
 	document.querySelector('.sub-local-list').addEventListener('click', function (e) {
-		console.log(e.target);
+		// console.log(e.target);
 		if (e.target && e.target.nodeName == 'LI') {
 			var alreadyActive = document.querySelector('ul.sub-local-list li.active');
 			if (alreadyActive !== null) {
@@ -23,7 +23,7 @@ function setSubLocalClickEvent() {
 					alreadyActive.className = alreadyActive.className.replace(new RegExp('(^|\\b)' + 'active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 			}
 
-			console.log(this.getAttribute("data-type")); // 동물 유형
+			// console.log(this.getAttribute("data-type")); // 동물 유형
 			if (e.target.classList)
 				e.target.classList.add('active');
 			else
@@ -49,7 +49,7 @@ function setAnimalTab() {
 					alreadyActive.className = alreadyActive.className.replace(new RegExp('(^|\\b)' + 'active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 			}
 
-			console.log(this.getAttribute("data-type")); // 동물 유형
+			// console.log(this.getAttribute("data-type")); // 동물 유형
 			if (this.classList)
 				this.classList.add('active');
 			else
@@ -62,7 +62,7 @@ function setAnimalTab() {
 function search() {
 	var animalName = document.querySelector('.animal-list li.active').innerText;
 
-	console.log(animalName + " 동물");
+	// console.log(animalName + " 동물");
 	$('#searchName').text(animalName);
 }
 
@@ -87,7 +87,7 @@ function setLocalTab() {
 				this.classList.add('active');
 			else
 				this.className += ' ' + 'active';
-			console.log(this.getAttribute("data-type")); // 지역 유형
+			// console.log(this.getAttribute("data-type")); // 지역 유형
 
 			var subLocalUl = document.getElementById('subLocalList');
 			var localType = parseInt(this.getAttribute("data-type"));
@@ -97,7 +97,7 @@ function setLocalTab() {
 			} else {
 				// 다른 지역을 골랐을 경우
 				subLocalUl.style.display = "inline-block";
-				console.log(subLocalList[localType]);
+				// console.log(subLocalList[localType]);
 
 				subLocalUl.innerHTML = null;
 				for (var i = 0; i < subLocalList[localType].length; i++) {

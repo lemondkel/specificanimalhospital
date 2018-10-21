@@ -1,0 +1,196 @@
+﻿.qna-list-top {
+	margin-top: 50px;
+	display: inline-block;
+	width: 100%;
+}
+
+.qna-list-top div {
+	vertical-align: top;
+}
+
+.qna-list-top div * {
+	vertical-align: top;
+}
+
+.hospital-detail-area {
+	border: 1px solid #CCC;
+	padding: 10px 0;
+	margin-top: 10px;
+	display: inline-block;
+	width: 80%;
+}
+
+.mypage-left {
+	border: 1px solid #CCC;
+	padding: 20px 0;
+	margin-top: 10px;
+	display: inline-block;
+	width: 18%;
+	margin-right: 10px;
+	vertical-align: top;
+}
+
+.detail-title {
+	margin-bottom: 0;
+	text-align: left;
+	padding-left: 40px;
+	font-family: '맑은 고딕';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
+}
+
+.detail-title span.black {
+	color: #333;
+}
+
+.user-info {
+	margin-top: 20px;
+	line-height: 27px;
+	font-size: 14px;
+	padding-left: 40px;
+}
+
+.user-info span.user-label {
+	width: 55px;
+	display: inline-block;
+	color: #7B943B;
+}
+
+.user-info p {
+	margin: 0;
+}
+
+.title-bottom-div {
+	border-bottom: 1px solid #7B943B;
+	display: inline-block;
+	width: 100%;
+}
+
+.title-bottom-div > .option {
+	float: right;
+	margin-right: 15px;
+	font-size: 14px;
+}
+
+.option > span.number {
+	font-weight: 700;
+	color: #6d7b2b;
+}
+
+button.detail-scrap-button {
+	left: 0;
+	display: inline-block;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: none;
+	padding: 10px 25px;
+	font-size: 13px;
+	font-family: '맑은 고딕 Bold', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	color: white;
+	cursor: pointer;
+}
+
+button.detail-scrap-button:hover {
+	opacity: 0.7;
+}
+
+.detail-info {
+	display: inline-block;
+	width: 100%;
+	padding: 0 40px;
+}
+
+.detail-info-title {
+	display: inline-block;
+	margin: 0;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 20px;
+	color: #7B943B;
+}
+
+.detail-more {
+	float: right;
+	position: relative;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 18px;
+	color: #7B943B;
+}
+
+p.desc {
+	margin: 0;
+}
+
+hr.detail-hr {
+	background: none;
+	border: none;
+	border-bottom: 1px #7B943B solid;
+}
+
+.detail-area-left {
+	width: 15%;
+	height: 250px;
+	vertical-align: top;
+	float: left;
+	font-weight: 700;
+	font-size: 20px;
+	color: #7B943B;
+	padding-left: 10px;
+}
+
+.detail-area-right {
+	width: 85%;
+	height: 300px;
+	vertical-align: top;
+	float: left;
+	box-sizing: border-box;
+}
+
+.detail-board {
+	width: 100%;
+	text-align: center;
+}
+
+.detail-board td, .detail-board th {
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+
+.detail-board td:first-child, .detail-board th:first-child {
+	border-left: 1px solid #CCC;
+}
+
+.detail-board th {
+	color: #7B943B;
+	border-top: 1px solid #CCC;
+}
+
+.board-link {
+	color: black;
+}
+
+.board-link:hover {
+	text-decoration: underline;
+}
+
+.detail-area {
+	padding: 20px 0;
+}
+
+.detail-more:hover {
+	color: #1dabb8;
+}
+
+.hospital-item {
+	width: 31% !important;
+}
+
+.hospital-item:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}

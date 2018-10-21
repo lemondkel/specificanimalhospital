@@ -1,36 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	setAnimalTab(); // 동물 선택 탭을 설정합니다.
-	setLocalTab(); // 지역 선택 탭을 설정합니다.
-	setSubLocalClickEvent(); // 서브 지역 클릭 이벤트를 설정합니다.
 
-	$('.hospital-area').on('click', function() {
-		var hospitalId = parseInt($(this).parent().attr('data-hospital-id'));
-
-		window.location.href = '/hospital/detail/' + hospitalId;
+	$('.hospital-item').on('click', '.img', function () {
+		var link = $(this).parents('.hospital-item').attr('data-link');
+		window.open(link, '_blank');
 	})
 });
-
-function setSubLocalClickEvent() {
-	document.querySelector('.sub-local-list').addEventListener('click', function (e) {
-		console.log(e.target);
-		if (e.target && e.target.nodeName == 'LI') {
-			var alreadyActive = document.querySelector('ul.sub-local-list li.active');
-			if (alreadyActive !== null) {
-				// 기존 탭이 존재할 경우
-				if (alreadyActive.classList)
-					alreadyActive.classList.remove('active');
-				else
-					alreadyActive.className = alreadyActive.className.replace(new RegExp('(^|\\b)' + 'active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-			}
-
-			console.log(this.getAttribute("data-type")); // 동물 유형
-			if (e.target.classList)
-				e.target.classList.add('active');
-			else
-				e.target.className += ' ' + 'active';
-		}
-	});
-}
 
 /**
  * 동물 선택을 하면 해당 탭을 활성화시키고 기존 탭을 비활성화 시킵니다.
@@ -49,65 +24,20 @@ function setAnimalTab() {
 					alreadyActive.className = alreadyActive.className.replace(new RegExp('(^|\\b)' + 'active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 			}
 
-			console.log(this.getAttribute("data-type")); // 동물 유형
 			if (this.classList)
 				this.classList.add('active');
 			else
 				this.className += ' ' + 'active';
 		});
 	}
-}
-
-// 검색 이벤트
-function search() {
-	var animalName = document.querySelector('.animal-list li.active').innerText;
-
-	console.log(animalName + " 동물");
-	$('#searchName').text(animalName);
 }
 
 /**
- * 지역 선택을 하면 해당 탭을 활성화시키고 기존 탭을 비활성화 시킵니다.
+ * 검색 이벤트
+ * @since 2018-10-21
  */
-function setLocalTab() {
-	var localList = document.querySelectorAll('ul.local-list li');
-	for (var i = 0; i < localList.length; i++) {
-		localList[i].addEventListener('click', function () {
+function search() {
+	var animalName = document.querySelector('.animal-list li.active').innerText;
 
-			var alreadyActive = document.querySelector('ul.local-list li.active');
-			if (alreadyActive !== null) {
-				// 기존 탭이 존재할 경우
-				if (alreadyActive.classList)
-					alreadyActive.classList.remove('active');
-				else
-					alreadyActive.className = alreadyActive.className.replace(new RegExp('(^|\\b)' + 'active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-			}
-
-			if (this.classList)
-				this.classList.add('active');
-			else
-				this.className += ' ' + 'active';
-			console.log(this.getAttribute("data-type")); // 지역 유형
-
-			var subLocalUl = document.getElementById('subLocalList');
-			var localType = parseInt(this.getAttribute("data-type"));
-			if (localType === -1) {
-				// 전체 지역을 골랐을 경우
-				subLocalUl.style.display = "none";
-			} else {
-				// 다른 지역을 골랐을 경우
-				subLocalUl.style.display = "inline-block";
-				console.log(subLocalList[localType]);
-
-				subLocalUl.innerHTML = null;
-				for (var i = 0; i < subLocalList[localType].length; i++) {
-					var html = '<li>';
-					html += subLocalList[localType][i];
-					html += '</li>';
-
-					subLocalUl.innerHTML += html;
-				}
-			}
-		});
-	}
+	$('#searchName').text(animalName);
 }
