@@ -180,3 +180,38 @@ hr.detail-hr {
 	opacity: 0.7;
 	cursor: pointer;
 }
+
+.magazine-scrap-button {
+	height: 28px;
+	font-family: '맑은 고딕 Bold', '맑은 고딕 Regular', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	color: #7B943B;
+	width: 100%;
+	box-sizing: border-box;
+	outline: none;
+	background-color: rgba(227, 236, 169, 0.298039215686275);
+	border: 1px solid rgba(198, 224, 75, 0.3);
+	border-radius: 0;
+}
+
+.qna-table {
+	width: 100%;
+	font-family: '맑은 고딕 Bold', '맑은 고딕';
+	font-style: normal;
+	text-align: center;
+	line-height:40px;
+}
+
+.qna-table th {
+	font-size:14px;
+	font-family: '맑은 고딕 Bold', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	color: #7B943B;
+	border-bottom : 2px solid #7B943B;
+}
+
+.qna-table td {
+	border-bottom : 1px solid #7B943B;
+}

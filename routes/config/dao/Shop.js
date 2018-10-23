@@ -16,6 +16,9 @@ module.exports = {
 		animals: {
 			type: Sequelize.STRING(50)
 		},
+		image : {
+			type: Sequelize.STRING(200)
+		},
 		site : {
 			type: Sequelize.STRING(200)
 		},

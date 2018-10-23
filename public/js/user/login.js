@@ -12,11 +12,10 @@ function login() {
 		method: "POST",
 		success: function (data) {
 			console.log(data);
-			alert(data.desc);
 			if (data.result) {
 				window.location.href = '/';
 			} else {
-
+				alert(data.desc);
 			}
 		},
 		error: function (err) {

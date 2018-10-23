@@ -19,29 +19,29 @@
 
 <section class="hospital-detail-area">
 	<h2 class="detail-title">
-		<span class="black">관리자</span> 님 환영합니다.
+		<span class="black"><%= user.nick %></span> 님 환영합니다.
 	</h2>
 
 	<div class="user-info">
 		<p>
 			<span class="user-label">아이디</span>
-			<span>admin</span>
+			<span><%= user.id %></span>
 		</p>
 		<p>
 			<span class="user-label">이름</span>
-			<span>관리자</span>
+			<span><%= user.name %></span>
 		</p>
 		<p>
 			<span class="user-label">닉네임</span>
-			<span>관리자</span>
+			<span><%= user.nick %></span>
 		</p>
 		<p>
 			<span class="user-label">이메일</span>
-			<span>admin@sac.com</span>
+			<span><%= user.email %></span>
 		</p>
 		<p>
 			<span class="user-label">연락처</span>
-			<span>010-1234-5678</span>
+			<span><%= user.phone %></span>
 		</p>
 	</div>
 
@@ -97,54 +97,143 @@
 					</div>
 				</div>
 			</div>
+
+			<h3 class="detail-info-title">나의 매거진</h3>
+			<a class="detail-more" href="#">더보기 <span>+</span></a>
+
+			<hr class="detail-hr"/>
+
+			<div style="width: 100%; display: inline-block;">
+				<div class="hospital-item" data-magazine-idx="1">
+					<div class="hospital-area">
+						<div class="item-top">
+							<div class="img">매거진~</div>
+						</div>
+						<button type="button" class="magazine-scrap-button">♥ 스크랩</button>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
 
-	<div class="detail-area">
-		<div class="detail-area-left">위치</div>
-		<div id="map" class="detail-area-right"></div>
+		<hr class="detail-hr"/>
 
-		<div style="text-align: right;">
-			<button type="button" class="detail-scrap-button">
-				지도 보내기
-			</button>
-		</div>
-	</div>
+		<h3 class="detail-info-title">나의 Q&A</h3>
+		<a class="detail-more" href="#">더보기 <span>+</span></a>
+		<hr class="detail-hr"/>
 
-	<hr class="detail-hr"/>
-
-	<div class="detail-area">
-		<div class="detail-area-left">후기</div>
-		<div class="detail-area-right" style="height: auto;">
-			<table class="detail-board" cellspacing="0" cellpadding="0">
-				<thead>
-				<tr>
-					<th>No.</th>
-					<th>내용</th>
-					<th>별점</th>
-					<th>작성자</th>
-					<th>작성일</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td>1</td>
-					<td>
-						<a class="board-link" href="#">후기후기</a>
-					</td>
-					<td>★★★★☆</td>
-					<td>l2****</td>
-					<td>18.10.09</td>
-				</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-
-	<div style="text-align: right;">
-		<button type="button" class="detail-scrap-button">
-			후기작성
-		</button>
+		<table class="qna-table" cellpadding="0" cellspacing="0">
+			<thead>
+			<th>카테고리</th>
+			<th>제목</th>
+			<th>작성자</th>
+			<th>작성일</th>
+			<th>조회수</th>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					거북이
+				</td>
+				<td>
+					<a href="/qna/detail/1">asdasd</a>
+				</td>
+				<td>
+					ㅁㄴㅇㅁㄴㅇ
+				</td>
+				<td>
+					2018-10-23
+				</td>
+				<td>
+					0
+				</td>
+			</tr>
+			<tr>
+				<td>
+					거북이
+				</td>
+				<td>
+					<a href="/qna/detail/1">asdasd</a>
+				</td>
+				<td>
+					ㅁㄴㅇㅁㄴㅇ
+				</td>
+				<td>
+					2018-10-23
+				</td>
+				<td>
+					0
+				</td>
+			</tr>
+			<tr>
+				<td>
+					거북이
+				</td>
+				<td>
+					<a href="/qna/detail/1">asdasd</a>
+				</td>
+				<td>
+					ㅁㄴㅇㅁㄴㅇ
+				</td>
+				<td>
+					2018-10-23
+				</td>
+				<td>
+					0
+				</td>
+			</tr>
+			<tr>
+				<td>
+					거북이
+				</td>
+				<td>
+					<a href="/qna/detail/1">asdasd</a>
+				</td>
+				<td>
+					ㅁㄴㅇㅁㄴㅇ
+				</td>
+				<td>
+					2018-10-23
+				</td>
+				<td>
+					0
+				</td>
+			</tr>
+			<tr>
+				<td>
+					거북이
+				</td>
+				<td>
+					<a href="/qna/detail/1">asdasd</a>
+				</td>
+				<td>
+					ㅁㄴㅇㅁㄴㅇ
+				</td>
+				<td>
+					2018-10-23
+				</td>
+				<td>
+					0
+				</td>
+			</tr>
+			<tr>
+				<td>
+					거북이
+				</td>
+				<td>
+					<a href="/qna/detail/1">asdasd</a>
+				</td>
+				<td>
+					ㅁㄴㅇㅁㄴㅇ
+				</td>
+				<td>
+					2018-10-23
+				</td>
+				<td>
+					0
+				</td>
+			</tr>
+			</tbody>
+		</table>
 	</div>
 </section>
 

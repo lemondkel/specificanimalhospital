@@ -1,12 +1,14 @@
 var rootPath = process.cwd();
 var express = require('express');
 var router = express.Router();
-/*
 
- var Sequelize = require('sequelize');
- var db = require('./config/db').info;
- var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
- */
+var Sequelize = require('sequelize');
+var db = require('./config/db/db').info;
+var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
+
+var userDao = require('./config/dao/User');
+
+const User = sequelize.define('User', userDao.info, userDao.desc);
 
 /**
  * 로그인
@@ -49,8 +51,14 @@ router.get('/join_step3', function (req, res, next) {
  * @since 2018-10-14
  */
 router.get('/mypage', function (req, res, next) {
-	res.locals.menuid = 3;
-	res.render('user/mypage');
+	User.findOne({
+		where: {
+			id: req.session.userid
+		}
+	}).then(function (data) {
+		res.locals.menuid = 3;
+		res.render('user/mypage', {user: data});
+	});
 });
 
 module.exports = router;

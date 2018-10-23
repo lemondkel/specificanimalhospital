@@ -10,14 +10,15 @@
 
 .qna-list-top div * {
 	vertical-align: top;
+	height: 32px;
 }
 
 .hospital-detail-area {
 	border: 1px solid #CCC;
-	padding: 10px 0;
 	margin-top: 10px;
 	display: inline-block;
 	width: 80%;
+	padding: 10px;
 }
 
 .mypage-left {
@@ -193,4 +194,62 @@ hr.detail-hr {
 .hospital-item:hover {
 	opacity: 0.7;
 	cursor: pointer;
+}
+
+.question-button {
+	background-color: rgba(198, 224, 75, 1);
+	box-sizing: border-box;
+	border: 1px solid rgba(119, 119, 119, 1);
+	border-radius: 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: '맑은 고딕 Bold', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 18px;
+	color: #000000;
+	width: 184px;
+	height: 32px;
+}
+
+.question-search-button {
+	width: 79px;
+	height: 32px;
+	background: inherit;
+	background-color: rgba(255, 255, 255, 0);
+	box-sizing: border-box;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(119, 119, 119, 1);
+	border-radius: 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: '맑은 고딕 Bold', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 15px;
+	color: #000000;
+}
+
+.qna-table {
+	width: 100%;
+	font-family: '맑은 고딕 Bold', '맑은 고딕';
+	font-style: normal;
+	text-align: center;
+	line-height:40px;
+}
+
+.qna-table th {
+	font-size:14px;
+	font-family: '맑은 고딕 Bold', '맑은 고딕';
+	font-weight: 700;
+	font-style: normal;
+	color: #7B943B;
+	border-bottom : 2px solid #7B943B;
+}
+
+.qna-table td {
+	border-bottom : 1px solid #7B943B;
 }

@@ -1,24 +1,45 @@
 ﻿<link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+<%
+for (var i = 0; i < hospitalList.length; i++) {
+%>
+<div data-hospital-idx="<%= hospitalList[i].idx %>">
+	<input type="hidden" name="title" value="<%= hospitalList[i].title %>"/>
+	<input type="hidden" name="address" value="<%= hospitalList[i].address %>"/>
+	<input type="hidden" name="phone" value="<%= hospitalList[i].phone %>"/>
+	<input type="hidden" name="latitude" value="<%= hospitalList[i].latitude %>"/>
+	<input type="hidden" name="longitude" value="<%= hospitalList[i].longitude %>"/>
+</div>
+<%
+}
+%>
+
 <div class="top" style="margin-top: 50px; margin-bottom: 50px;">
 	<section class="body-left">
 		<ul class="animal-list">
 			<li>
 				<i class="animal-type animal-type-2"></i>
+				<div class="animal-layer animal-layer-2">거북이</div>
 			</li>
 			<li>
 				<i class="animal-type animal-type-5"></i>
+				<div class="animal-layer animal-layer-5">고슴도치</div>
 			</li>
 			<li>
 				<i class="animal-type animal-type-6"></i>
+				<div class="animal-layer animal-layer-6">앵무새</div>
 			</li>
 			<li>
 				<i class="animal-type animal-type-1"></i>
+				<div class="animal-layer animal-layer-1">토끼</div>
 			</li>
 			<li>
 				<i class="animal-type animal-type-4"></i>
+				<div class="animal-layer animal-layer-4">페럿</div>
 			</li>
 			<li>
 				<i class="animal-type animal-type-3"></i>
+				<div class="animal-layer animal-layer-3">햄스터</div>
 			</li>
 		</ul>
 	</section>
@@ -31,122 +52,122 @@
 		<a href="/magazine/list" class="show-more">더보기 +</a>
 	</div>
 	<div class="magazine-area owl-carousel owl-theme" id="magazineContainer">
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-1.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">토끼의 이갈이</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-1.jpg"/>
 			</div>
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-2.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">애완용 거북이</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">토끼의 이갈이</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
 			</div>
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-3.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">고슴도치 주의점</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+		</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-2.jpg"/>
 			</div>
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">패럿의 귀여움</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">애완용 거북이</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
 			</div>
+		</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-3.jpg"/>
+			</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">고슴도치 주의점</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
+			</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">패럿의 귀여움</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
+			</div>
+		</div>
 
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">패럿의 귀여움</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
 			</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">패럿의 귀여움</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
+			</div>
+		</div>
 
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">패럿의 귀여움</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
 			</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">패럿의 귀여움</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
+			</div>
+		</div>
 
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">패럿의 귀여움</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
 			</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">패럿의 귀여움</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
+			</div>
+		</div>
 
-			<div class="item">
-				<div class="item-top">
-					<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-				</div>
-				<div class="item-bottom">
-					<h4 class="magazine-title">패럿의 귀여움</h4>
-					<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-						이를 갈 수 있는 나무가 필요하다.
-						나무는 참나무 떡갈나무 등이
-						좋다. 이를 갈지 않으면 스트레스
-						를 받기 때문에 중요한데
-						…</p>
-				</div>
+		<div class="item">
+			<div class="item-top">
+				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
 			</div>
+			<div class="item-bottom">
+				<h4 class="magazine-title">패럿의 귀여움</h4>
+				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
+					이를 갈 수 있는 나무가 필요하다.
+					나무는 참나무 떡갈나무 등이
+					좋다. 이를 갈지 않으면 스트레스
+					를 받기 때문에 중요한데
+					…</p>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -156,153 +177,17 @@
 		<a href="/shop/list" class="show-more">더보기 +</a>
 	</div>
 	<div class="shop-area owl-carousel owl-theme" id="shopContainer">
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-1.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-				</div>
+		<%
+		for( var i = 0; i < shopList.length; i++){
+		%>
+		<div class="item" data-link="<%= shopList[i].site %>">
+			<div class="item-top">
+				<img class="shop-img" src="<%= shopList[i].image %>"/>
 			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-2.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-3.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-4.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-5.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-5"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-6"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-6.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-7.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-8.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="item" data-link="http://www.naver.com">
-				<div class="item-top">
-					<img class="shop-img" src="../images/example/example-main-shop-9.png" />
-				</div>
-				<div class="item-bottom">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
+		</div>
+		<%
+		}
+		%>
 	</div>
 </div>
 

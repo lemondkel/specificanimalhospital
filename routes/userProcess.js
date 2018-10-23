@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 
 var Sequelize = require('sequelize');
-var db = require(rootPath + '/routes/config/db/db').info;
+var db = require('./config/db/db').info;
 var sequelize = new Sequelize(db.dbname, db.username, db.password, db.server);
 
 var userDao = require('./config/dao/User');
@@ -62,6 +62,25 @@ router.post('/nickCheck', function (req, res, next) {
 		console.log(err);
 		res.json({result: false, desc: '서버 에러'});
 	});
+});
+
+/**
+ * 병원 후기작성
+ * @since 2018-10-20
+ */
+router.post('/loginCheck', function (req, res, next) {
+	if (req.session.userid !== undefined) {
+		res.json({
+			result: true,
+			desc: "로그인 상태입니다."
+		})
+	} else {
+		res.json({
+			result: false,
+			code: 600,
+			desc: "로그인이 필요합니다."
+		})
+	}
 });
 
 /**

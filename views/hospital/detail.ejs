@@ -1,14 +1,19 @@
 ﻿<link rel="stylesheet" type="text/css" href="/css/hospital/detail.css"/>
 
+<input type="hidden" id="hospitalIdx" value="<%= hospitalIdx %>"/>
+<input type="hidden" id="latitude" value="<%= item.latitude %>"/>
+<input type="hidden" id="longitude" value="<%= item.longitude %>"/>
+<input type="hidden" id="title" value="<%= item.title %>"/>
+
 <section class="hospital-detail-area">
 	<h2 class="detail-title">
-		안양비산동물병원
+		<%= item.title %>
 	</h2>
 
 	<div class="title-bottom-div">
 		<div class="option">
 			<span>스크랩</span>
-			<span class="number">27</span>
+			<span class="number" id="scrap"><%= item.scrap %></span>
 			<span>명</span>
 		</div>
 
@@ -23,24 +28,25 @@
 		♥ 스크랩
 	</button>
 
+	<%
+	var images = item.images.split(",");
+	%>
+
 	<div class="detail-info">
 		<div class="info-left">
 			<div class="main-img">
-				<div class="detail-img" style="background:url(/images/example/example-main-magazine-1.jpg)" ></div>
+				<div class="detail-img" style="background:url('<%= images[0] %>')"></div>
 			</div>
 			<ul class="sub-img-list">
+				<%
+				for(var i = 0; i < images.length; i++) {
+				%>
 				<li>
-					<img src="/images/example/example-main-magazine-1.jpg" />
+					<img src="<%= images[i] %>"/>
 				</li>
-				<li>
-					<img src="/images/example/example-main-magazine-2.jpg" />
-				</li>
-				<li>
-					<img src="/images/example/example-main-magazine-3.jpg" />
-				</li>
-				<li>
-					<img src="/images/example/example-main-magazine-4.jpg" />
-				</li>
+				<%
+				}
+				%>
 			</ul>
 		</div>
 		<div class="info-right">
@@ -60,31 +66,42 @@
 				</tr>
 				<tr>
 					<td class="detail-label">전화번호</td>
-					<td>031-446-6575</td>
+					<td><span id="phone"><%= item.phone %></span></td>
 				</tr>
 				<tr>
 					<td class="detail-label">주　　소</td>
-					<td>경기도 안양시 만안구 태평로52번길 37</td>
+					<td><span id="address"><%= item.address %></span></td>
 				</tr>
 				<tr>
 					<td class="detail-label">진료시간</td>
 					<td>
-						<p class="desc">매일    10:00-21:00</p>
-						<p class="desc">공휴일 10:00-19:00</p>
-						<p class="desc">휴무    없음</p>
+						<p class="desc">매일 <%= item.time_weekday %></p>
+						<p class="desc">공휴일 <%= item.time_holiday %></p>
+						<p class="desc">휴무 <%= item.time_closed === null ? '없음' : item.time_closed %></p>
 					</td>
 				</tr>
 				<tr>
 					<td class="detail-label">홈페이지</td>
 					<td>
-						<a href="http://www.bisan.com" target="_blank">http://www.bisan.com</a>
+						<%
+						if(item.site === null) {
+						%>
+						-
+						<%
+						}
+						else {
+						%>
+						<a href="<%=item.site%>" target="_blank"><%=item.site%></a>
+						<%
+						}
+						%>
 					</td>
 				</tr>
 			</table>
 		</div>
 	</div>
 
-	<hr class="detail-hr" />
+	<hr class="detail-hr"/>
 
 	<div class="detail-area">
 		<div class="detail-area-left">위치</div>
@@ -97,20 +114,20 @@
 		</div>
 	</div>
 
-	<hr class="detail-hr" />
+	<hr class="detail-hr"/>
 
 	<div class="detail-area">
 		<div class="detail-area-left">후기</div>
 		<div class="detail-area-right" style="height: auto;">
 			<table class="detail-board" cellspacing="0" cellpadding="0">
 				<thead>
-					<tr>
-						<th>No.</th>
-						<th>내용</th>
-						<th>별점</th>
-						<th>작성자</th>
-						<th>작성일</th>
-					</tr>
+				<tr>
+					<th>No.</th>
+					<th>내용</th>
+					<th>별점</th>
+					<th>작성자</th>
+					<th>작성일</th>
+				</tr>
 				</thead>
 				<tbody>
 				<tr>

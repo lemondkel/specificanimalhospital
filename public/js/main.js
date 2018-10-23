@@ -22,6 +22,15 @@ $(document).ready(function () {
 		window.open(link, '_blank');
 	});
 
+	$('ul.animal-list').on('click', 'li', function () {
+		var target = $(this).children('div.animal-layer');
+		if (target.hasClass('active')) {
+			target.removeClass('active')
+		} else {
+			target.addClass('active');
+		}
+	})
+
 	getLocation();
 });
 

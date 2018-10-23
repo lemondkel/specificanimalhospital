@@ -17,4 +17,13 @@ router.get('/list', function (req, res, next) {
 	res.render('qna/list');
 });
 
+/**
+ * 마이페이지
+ * @since 2018-10-14
+ */
+router.get('/detail/:id', function (req, res, next) {
+	res.locals.menuid = 5;
+	res.render('qna/detail', {qnaIdx : req.params.id});
+});
+
 module.exports = router;

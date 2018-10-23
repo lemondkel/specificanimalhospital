@@ -22,6 +22,12 @@ module.exports = {
 		address: {
 			type: Sequelize.STRING(1000)
 		},
+		latitude : {
+			type : Sequelize.DOUBLE
+		},
+		longitude : {
+			type : Sequelize.DOUBLE
+		},
 		time_weekday: {
 			type: Sequelize.STRING(50)
 		},
@@ -33,6 +39,13 @@ module.exports = {
 		},
 		site : {
 			type: Sequelize.STRING(200)
+		},
+		scrap : {
+			type : Sequelize.INTEGER,
+			defaultValue : 0
+		},
+		images : {
+			type : Sequelize.STRING(1000)
 		},
 		createdAt: {
 			type: Sequelize.DATE,
