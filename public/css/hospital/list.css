@@ -82,9 +82,9 @@ span.address {
 	word-break: break-all;
 	-ms-text-overflow: ellipsis;
 	text-overflow: ellipsis;
-	display: inline-block;
+	display: inline-block !important;
 	white-space: normal;
 	-webkit-line-clamp: 2;
-	display: -webkit-box;
+	display: -webkit-box !important;
 	line-height: 20px;
 }
