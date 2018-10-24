@@ -13,11 +13,22 @@ module.exports = {
 		title: {
 			type: Sequelize.STRING(100)
 		},
-		text: {
-			type: Sequelize.STRING(2000)
-		},
 		thumbnail: {
 			type: Sequelize.STRING(500)
+		},
+		text: {
+			type: Sequelize.STRING(500)
+		},
+		images: {
+			type: Sequelize.STRING(1000)
+		},
+		viewCount : {
+			type : Sequelize.INTEGER,
+			defaultValue : 0
+		},
+		scrap : {
+			type : Sequelize.INTEGER,
+			defaultValue : 0
 		},
 		createdAt: {
 			type: Sequelize.DATE,

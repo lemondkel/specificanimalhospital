@@ -1,13 +1,24 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	setAnimalTab(); // 동물 선택 탭을 설정합니다.
 	setLocalTab(); // 지역 선택 탭을 설정합니다.
 	setSubLocalClickEvent(); // 서브 지역 클릭 이벤트를 설정합니다.
 
-	$('.hospital-area').on('click', function() {
+	$('.hospital-area').on('click', function () {
 		var hospitalId = parseInt($(this).parent().attr('data-hospital-id'));
 
 		window.location.href = '/hospital/detail/' + hospitalId;
-	})
+	});
+
+	$('ul.animal-list').children('[data-type=' + $('#type').val() + ']').addClass('active');
+	$('ul.local-list').children('[data-type=' + $('#localType').val().replace(/ /g, '_') + ']').addClass('active');
+	$('ul.local-list').children('[data-type=' + $('#localType').val().replace(/ /g, '_') + ']').click();
+	$('[data-sub-local-name].active').removeClass('active');
+	try{
+		$('[data-sub-local-name=' +  $('#subLocalText').val() + ']').addClass('active');
+	} catch(error ) {
+		$('[data-sub-local-name]').eq(0).addClass('active');
+	}
+	$('option[value=' + $('#filter').val() + ']').prop('selected', true);
 });
 
 function setSubLocalClickEvent() {
@@ -60,13 +71,12 @@ function setAnimalTab() {
 
 // 검색 이벤트
 function search() {
-	var animalType = parseInt(document.querySelector('.animal-list li.active').getAttribute('data-type'));
 	var localType = parseInt(document.querySelector('.local-list li.active').getAttribute('data-type'));
-	var subLocalText = document.querySelector('.sub-local-list li.active').innerText;
+	var subLocalText = document.querySelector('.sub-local-list li.active').getAttribute("data-sub-local-name");
+	var type = parseInt(document.querySelector('.animal-list li.active').getAttribute("data-type"));
+	var filter = $('option:selected').val();
 
-	console.log(animalType + "번 동물");
-	console.log(localType + "번 지역");
-	console.log(subLocalText + "번 서브지역");
+	window.location.href = '/hospital/list?type=' + type + "&localType=" + localType + "&subLocalText=" + subLocalText + "&filter=" + filter;
 }
 
 /**
@@ -104,7 +114,12 @@ function setLocalTab() {
 
 				subLocalUl.innerHTML = null;
 				for (var i = 0; i < subLocalList[localType].length; i++) {
-					var html = '<li>';
+					var html;
+					if (i === 0)
+						html = '<li class="active" data-sub-local-name="">';
+					else
+						html = '<li data-sub-local-name="' + subLocalList[localType][i].replace(/ /g, '_') + '">';
+
 					html += subLocalList[localType][i];
 					html += '</li>';
 

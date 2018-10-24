@@ -177,6 +177,11 @@ ul.animal-type-list li {
 	font-size: 28px;
 }
 
+.magazine-area .item:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
 @media (max-width: 1150px) {
 	.owl-nav {
 		display: none;

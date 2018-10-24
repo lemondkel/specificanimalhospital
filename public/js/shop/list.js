@@ -38,6 +38,4 @@ function setAnimalTab() {
  */
 function search() {
 	var animalName = document.querySelector('.animal-list li.active').innerText;
-
-	$('#searchName').text(animalName);
 }

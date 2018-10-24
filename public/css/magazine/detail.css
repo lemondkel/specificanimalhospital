@@ -1,0 +1,40 @@
+.magazine-img-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: inline-block;
+	width: 100%;
+}
+
+.magazine-img-list li {
+	width: 100%;
+	height: 400px;
+	background-repeat: no-repeat !important;
+	-webkit-background-size: auto 100% !important;
+	background-size: auto 100% !important;
+	background-position: center !important;
+}
+
+span.option {
+	float: right;
+	margin-right: 10px;
+}
+
+.magazine-hr {
+	background: #c6e04b;
+	height: 5px;
+	width: 100%;
+	outline: none;
+	border: none;
+}
+
+.magazine-detail-title {
+	font-size:20px;
+	font-weight: 700;
+}
+
+.magazine-detail-date {
+	float: right;
+	font-size:20px;
+	font-weight: 700;
+}

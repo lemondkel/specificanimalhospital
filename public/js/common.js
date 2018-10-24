@@ -1,3 +1,19 @@
+$(document).ready(function () {
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 200) {
+			$('#scroll').fadeIn();
+		} else {
+			$('#scroll').fadeOut();
+		}
+	});
+
+	$('#scroll').click(function() {
+		$('html, body').stop().animate({
+			scrollTop : 0
+		}, 500);
+	});
+});
+
 var subLocalList = [
 	[
 		"서울전체",

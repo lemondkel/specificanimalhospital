@@ -74,6 +74,7 @@ var qna = require('./routes/qna');
 
 var userProcess = require('./routes/userProcess');
 var hospitalProcess = require('./routes/hospitalProcess');
+var magazineProcess = require('./routes/magazineProcess');
 
 var app = express();
 
@@ -109,6 +110,7 @@ app.use('/user', user);
 app.use('/user/process', userProcess);
 app.use('/hospital', hospital);
 app.use('/hospital/process', hospitalProcess);
+app.use('/magazine/process', magazineProcess);
 app.use('/magazine', magazine);
 app.use('/shop', shop);
 app.use('/qna', qna);

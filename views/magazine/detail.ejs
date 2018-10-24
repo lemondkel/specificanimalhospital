@@ -1,0 +1,30 @@
+﻿<link rel="stylesheet" type="text/css" href="/css/magazine/detail.css"/>
+
+<section>
+	<hr class="magazine-hr"/>
+	<div class="magazine-detail-title">
+		<span><%= item.title %></span>
+		<span class="option">조회수 <span><%= item.viewCount %></span></span>
+		<span class="option" style="margin-right: 40px;">스크랩 <span><%= item.scrap %></span></span>
+	</div>
+	<hr class="magazine-hr"/>
+	<div class="magazine-detail-date">
+		<span><%= item.createdAt.getFullYear() + "-" + (item.createdAt.getMonth() < 10 ?
+					"0" + item.createdAt.getMonth() : item.createdAt.getMonth()) +
+			"-" + (item.createdAt.getDay() < 10 ? "0" + item.createdAt.getDay() : item.createdAt.getDay()) %></span>
+	</div>
+
+	<ul class="magazine-img-list">
+		<%
+ 		var images = item.images.split(',');
+
+ 		for(var i=0; i<images.length; i++) {
+ 			%>
+		<li style="background: url(<%=images[i]%>)"></li>
+		<%
+		}
+ %>
+	</ul>
+</section>
+
+<script type="text/javascript" src="/js/magazine/detail.js"></script>

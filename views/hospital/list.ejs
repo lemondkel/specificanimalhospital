@@ -1,5 +1,10 @@
 ﻿<link rel="stylesheet" type="text/css" href="/css/hospital/list.css"/>
 
+<input type="hidden" id="type" value="<%=type%>" />
+<input type="hidden" id="localType" value="<%=localType%>" />
+<input type="hidden" id="subLocalText" value="<%=subLocalText%>" />
+<input type="hidden" id="filter" value="<%=filter%>" />
+
 <!--동물,지역 선택 부분 <div id="select-section"> -->
 <section class="one-section" style="margin-top: 50px;">
 	<h3 class="one-section-title">병원선택</h3>
@@ -50,49 +55,50 @@
 
 	<div>
 		<h3 class="one-section-title">검색결과</h3>
-		<select class="search-filter">
-			<option>최신등록</option>
-			<option>이름</option>
-			<option>거리</option>
-			<option>스크랩</option>
+		<select id="filter" class="search-filter">
+			<option value="id">최신등록</option>
+			<option value="title">이름</option>
+			<option value="scrap">스크랩</option>
 		</select>
 	</div>
 	<section class="box-area" style="text-align: center; position: relative; top: -20px;">
-		<div class="hospital-item" data-hospital-id="1">
+		<%
+		for(var i=0; i<items.length ;i++) {
+			%>
+		<div class="hospital-item" data-hospital-id="<%=items[i].idx%>">
 			<div class="hospital-area">
 				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
+					<div class="img" style="background: url('<%=items[i].images.split(',')[0]%>')"></div>
 				</div>
 				<div class="item-bottom">
 					<div class="desc">
 						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
+						<span class="desc-value"><%=items[i].title%></span>
 					</div>
 					<div class="desc">
 						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
+						<span class="desc-value"><%=items[i].address%></span>
 					</div>
 					<div class="desc">
 						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
+						<span class="desc-value"><%=items[i].phone%></span>
 					</div>
 					<br/>
 					<div class="desc">
 						<span class="desc-label">대상</span>
 						<span class="desc-value">
 					<ul class="animal-type-list">
+						<%
+ 						var animals = items[i].animals.split(',');
+
+ 						for(var i=0; i<animals.length ;i++) {
+ 							%>
 						<li>
-							<i class="animal-type animal-type-1"></i>
+							<i class="animal-type animal-type-<%=animals[i]%>"></i>
 						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
+						<%
+						}
+ 						%>
 					</ul>
 					</span>
 					</div>
@@ -100,477 +106,56 @@
 			</div>
 			<button class="scrap-button">♥ 스크랩</button>
 		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img">안양비산동물병원</div>
-				</div>
-				<div class="item-bottom">
-					<div class="desc">
-						<span class="desc-label">이름</span>
-						<span class="desc-value">안양비산동물병원</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">주소</span>
-						<span class="desc-value">경기도 안양시 만안구 태평로52번길 37</span>
-					</div>
-					<div class="desc">
-						<span class="desc-label">번호</span>
-						<span class="desc-value">031-446-6575</span>
-					</div>
-					<br/>
-					<div class="desc">
-						<span class="desc-label">대상</span>
-						<span class="desc-value">
-					<ul class="animal-type-list">
-						<li>
-							<i class="animal-type animal-type-1"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-2"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-3"></i>
-						</li>
-						<li>
-							<i class="animal-type animal-type-4"></i>
-						</li>
-					</ul>
-					</span>
-					</div>
-				</div>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
+		<%
+		}
+ 		%>
 	</section>
 	<div class="pagination">
-		<span>&lt;</span>
-		<span class="active">1</span>
-		<span>2</span>
-		<span>3</span>
-		<span>4</span>
-		<span>5</span>
-		<span>&gt;</span>
+		<%
+		var countList = 12;
+		var countPage = 5;
+		var totalPage = parseInt(count / countList);
+
+		if (parseInt(count % countList) > 0) {
+			totalPage++;
+		}
+
+		if (totalPage < page) {
+			page = totalPage;
+		}
+		var startPage = parseInt(((page - 1) / 10) * 10 + 1);
+		var endPage = startPage + countPage - 1;
+
+		if (endPage > totalPage) {
+			endPage = totalPage;
+		}
+
+		if (startPage > 1) {
+		%><a href="?page=1&type=<%=type%>&localType=<%=localType%>&subLocalText=<%=subLocalText%>&filter=<%=filter%>">처음</a><%
+		}
+
+		if (page > 1) {
+		%><a href="?page=<%=(page - 1)%>&type=<%=type%>&localType=<%=localType%>&subLocalText=<%=subLocalText%>&filter=<%=filter%>">이전</a><%
+		}
+
+		for (var iCount = startPage; iCount <= endPage; iCount++) {
+		if (iCount == page) {
+		%><b><%=iCount%></b><%
+		} else {
+		%>
+		<%=iCount%>
+		<%
+		}
+		}
+
+		if (page < totalPage) {
+		%><a href="?page=<%=(page + 1) %>&type=<%=type%>&localType=<%=localType%>&subLocalText=<%=subLocalText%>&filter=<%=filter%>">다음</a><%
+		}
+
+		if (endPage < totalPage) {
+		%><a href="?page=<%=totalPage%>&type=<%=type%>&localType=<%=localType%>&subLocalText=<%=subLocalText%>&filter=<%=filter%>">끝</a><%
+		}
+		%>
 	</div>
 </section>
 

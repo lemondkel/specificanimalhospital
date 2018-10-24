@@ -29,7 +29,12 @@ $(document).ready(function () {
 		} else {
 			target.addClass('active');
 		}
-	})
+	});
+
+	$('.magazine-area').on('click', '.item', function () {
+		var magazineIdx = $(this).attr('data-magazine-idx');
+		window.location.href = '/magazine/detail/' + magazineIdx;
+	});
 
 	getLocation();
 });

@@ -52,122 +52,21 @@ for (var i = 0; i < hospitalList.length; i++) {
 		<a href="/magazine/list" class="show-more">더보기 +</a>
 	</div>
 	<div class="magazine-area owl-carousel owl-theme" id="magazineContainer">
-		<div class="item">
+		<%
+		for(var i = 0; i < magazineList.length; i++) {
+		%>
+		<div class="item" data-magazine-idx="<%= magazineList[i].idx %>">
 			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-1.jpg"/>
+				<img class="magazine-img" src="<%= magazineList[i].thumbnail %>"/>
 			</div>
 			<div class="item-bottom">
-				<h4 class="magazine-title">토끼의 이갈이</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
+				<h4 class="magazine-title"><%= magazineList[i].title %></h4>
+				<p class="magazine-desc"><%= magazineList[i].text %></p>
 			</div>
 		</div>
-		<div class="item">
-			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-2.jpg"/>
-			</div>
-			<div class="item-bottom">
-				<h4 class="magazine-title">애완용 거북이</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
-			</div>
-		</div>
-		<div class="item">
-			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-3.jpg"/>
-			</div>
-			<div class="item-bottom">
-				<h4 class="magazine-title">고슴도치 주의점</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
-			</div>
-		</div>
-		<div class="item">
-			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-			</div>
-			<div class="item-bottom">
-				<h4 class="magazine-title">패럿의 귀여움</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
-			</div>
-		</div>
-
-		<div class="item">
-			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-			</div>
-			<div class="item-bottom">
-				<h4 class="magazine-title">패럿의 귀여움</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
-			</div>
-		</div>
-
-		<div class="item">
-			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-			</div>
-			<div class="item-bottom">
-				<h4 class="magazine-title">패럿의 귀여움</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
-			</div>
-		</div>
-
-		<div class="item">
-			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-			</div>
-			<div class="item-bottom">
-				<h4 class="magazine-title">패럿의 귀여움</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
-			</div>
-		</div>
-
-		<div class="item">
-			<div class="item-top">
-				<img class="magazine-img" src="../images/example/example-main-magazine-4.jpg"/>
-			</div>
-			<div class="item-bottom">
-				<h4 class="magazine-title">패럿의 귀여움</h4>
-				<p class="magazine-desc">토끼는 항상 이가 자라기 때문에
-					이를 갈 수 있는 나무가 필요하다.
-					나무는 참나무 떡갈나무 등이
-					좋다. 이를 갈지 않으면 스트레스
-					를 받기 때문에 중요한데
-					…</p>
-			</div>
-		</div>
+		<%
+		}
+		%>
 	</div>
 </div>
 
