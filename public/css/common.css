@@ -443,42 +443,42 @@ ul li:last-child i.animal-type {
 }
 
 i.animal-type-1 {
-	background: url(../images/ra.png);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-i.animal-type-2 {
 	background: url(../images/tur.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-i.animal-type-3 {
-	background: url(../images/ham.png);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-i.animal-type-4 {
-	background: url(../images/fer.png);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-i.animal-type-5 {
+i.animal-type-2 {
 	background: url(../images/hed.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-i.animal-type-6 {
+i.animal-type-3 {
 	background: url(../images/par.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+i.animal-type-4 {
+	background: url(../images/ra.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+i.animal-type-5 {
+	background: url(../images/fer.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+i.animal-type-6 {
+	background: url(../images/ham.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -617,6 +617,7 @@ button.scrap-button:hover {
 
 .pagination {
 	text-align: center;
+	font-size: 22px;
 }
 
 .pagination span:hover {
@@ -633,9 +634,9 @@ button.scrap-button:hover {
 	bottom: 50px;
 	right: 50px;
 	background: url(/images/top-button.png);
-	background-repeat:no-repeat;
-	-webkit-background-size:100% 100%;
-	background-size:100% 100%;
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
 	width: 50px;
 	height: 50px;
 	cursor: pointer;

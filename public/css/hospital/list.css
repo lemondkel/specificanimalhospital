@@ -69,3 +69,22 @@ button.search-bt:hover {
 	height: 30px;
 	font-size: 16px;
 }
+
+.animal-target-list {
+	min-height: 115px;
+	vertical-align: top;
+}
+
+span.address {
+	height: 42px;
+	overflow: hidden;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: inline-block;
+	white-space: normal;
+	-webkit-line-clamp: 2;
+	display: -webkit-box;
+	line-height: 20px;
+}

@@ -1,5 +1,7 @@
 ﻿<link rel="stylesheet" type="text/css" href="/css/shop/list.css"/>
 
+<input type="hidden" id="type" value="<%=type%>" />
+
 <!--동물,지역 선택 부분 <div id="select-section"> -->
 <section class="one-section" style="margin-top: 50px;">
 	<h4 class="select-animal-title">동물선택</h4>
@@ -28,351 +30,67 @@
 	</div>
 
 	<section class="box-area" style="text-align: center; position: relative; top: -20px;">
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
+		<%
+
+		for(var i=0; i<shopList.length; i++) {
+			%>
+		<div class="hospital-item" data-hospital-id="<%=shopList[i].idx%>" data-link="<%=shopList[i].site%>">
 			<div class="hospital-area">
 				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
+					<div class="img" style="background:url('<%=shopList[i].image%>')"></div>
 				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
 			</div>
-			<button class="scrap-button">♥ 스크랩</button>
 		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
-		<div class="hospital-item" data-hospital-id="1" data-link="http://www.naver.com">
-			<div class="hospital-area">
-				<div class="item-top">
-					<div class="img" style="background:url(/images/example/example-main-magazine-1.jpg)"></div>
-				</div>
-				<ul class="animal-type-list">
-					<li>
-						<i class="animal-type animal-type-1"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-2"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-3"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-4"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-5"></i>
-					</li>
-					<li>
-						<i class="animal-type animal-type-6"></i>
-					</li>
-				</ul>
-			</div>
-			<button class="scrap-button">♥ 스크랩</button>
-		</div>
+		<%
+		}
+ %>
 	</section>
 	<div class="pagination">
-		<span>&lt;</span>
-		<span class="active">1</span>
-		<span>2</span>
-		<span>3</span>
-		<span>4</span>
-		<span>5</span>
-		<span>&gt;</span>
+		<%
+		var countList = 12;
+		var countPage = 5;
+		var totalPage = parseInt(count / countList);
+
+		if (count % countList > 0) {
+			totalPage++;
+		}
+
+		if (totalPage < page) {
+			page = totalPage;
+		}
+		var startPage = parseInt(((page - 1) / 10) * 10 + 1);
+		var endPage = startPage + countPage - 1;
+
+		if (endPage > totalPage) {
+			endPage = totalPage;
+		}
+
+		if (startPage > 1) {
+		%><a href="?page=1&type=<%=type%>">처음</a><%
+		}
+
+		if (page > 1) {
+		%><a href="?page=<%=(page - 1)%>&type=<%=type%>">이전</a><%
+		}
+
+		for (var iCount = startPage; iCount <= endPage; iCount++) {
+		if (iCount == page) {
+		%><b><%=iCount%></b><%
+		} else {
+		%>
+		<%=iCount%>
+		<%
+		}
+		}
+
+		if (page < totalPage) {
+		%><a href="?page=<%=(page + 1) %>&type=<%=type%>">다음</a><%
+		}
+
+		if (endPage < totalPage) {
+		%><a href="?page=<%=totalPage%>&type=<%=type%>">끝</a><%
+		}
+		%>
 	</div>
 </section>
 

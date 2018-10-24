@@ -38,3 +38,11 @@ span.option {
 	font-size:20px;
 	font-weight: 700;
 }
+
+.magazine-title {
+	font-size: 14px;
+	font-weight: 700;
+	color: #333;
+	position: relative;
+	top: -2px;
+}

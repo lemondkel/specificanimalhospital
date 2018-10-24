@@ -32,7 +32,9 @@ router.get('/list', function (req, res, next) {
 			var options2 = {
 				limit: limit,
 				offset: offset,
-				$sort: {id: 1}
+				order: [
+					['idx', 'DESC']
+				]
 			};
 			if (type !== 0) {
 				options2.where = {

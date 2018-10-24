@@ -72,11 +72,20 @@ function setAnimalTab() {
 // 검색 이벤트
 function search() {
 	var localType = parseInt(document.querySelector('.local-list li.active').getAttribute('data-type'));
-	var subLocalText = document.querySelector('.sub-local-list li.active').getAttribute("data-sub-local-name");
 	var type = parseInt(document.querySelector('.animal-list li.active').getAttribute("data-type"));
 	var filter = $('option:selected').val();
+	var subLocalItem = document.querySelector('.sub-local-list li.active');
 
-	window.location.href = '/hospital/list?type=' + type + "&localType=" + localType + "&subLocalText=" + subLocalText + "&filter=" + filter;
+	var subLocalText;
+	if(subLocalItem !== null) {
+		subLocalText = subLocalItem.getAttribute("data-sub-local-name");
+	}
+
+	if (subLocalText !== undefined) {
+		window.location.href = '/hospital/list?type=' + type + "&localType=" + localType + "&filter=" + filter + "&subLocalText=" + subLocalText;
+	} else {
+		window.location.href = '/hospital/list?type=' + type + "&localType=" + localType + "&filter=" + filter;
+	}
 }
 
 /**

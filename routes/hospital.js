@@ -32,7 +32,7 @@ router.get('/list', function (req, res, next) {
 				localName = '서울';
 				break;
 			case 1:
-				localName = '경기도';
+				localName = '경기';
 				break;
 			case 2:
 				localName = '인천';
@@ -96,17 +96,23 @@ router.get('/list', function (req, res, next) {
 			var options2 = {
 				limit: limit,
 				offset: offset,
-				$sort: {id: 1},
+				order: [
+					['idx', 'DESC']
+				],
 				where: {}
 			};
 
 			if(filter !== 'id') {
 				switch(filter) {
 					case 'scrap':
-						options2.$sort = {scrap: 1};
+						options2.order = [
+							['scrap', 'DESC']
+						];
 						break;
 					case 'title':
-						options2.$sort = {title: 1};
+						options2.order = [
+							['title', 'DESC']
+						];
 						break;
 				}
 			}
@@ -121,7 +127,7 @@ router.get('/list', function (req, res, next) {
 						localName = '서울';
 						break;
 					case 1:
-						localName = '경기도';
+						localName = '경기';
 						break;
 					case 2:
 						localName = '인천';
@@ -176,8 +182,9 @@ router.get('/list', function (req, res, next) {
 					}
 				}
 			}
-
 			Hospital.findAll(options2).then(function (hospitalList) {
+				console.log(hospitalList);
+
 				res.locals.menuid = 1;
 				res.render('hospital/list', {
 					items: hospitalList,

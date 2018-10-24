@@ -77,24 +77,24 @@
 					</div>
 					<div class="desc">
 						<span class="desc-label">주소</span>
-						<span class="desc-value"><%=items[i].address%></span>
+						<span class="desc-value address"><%=items[i].address%></span>
 					</div>
 					<div class="desc">
 						<span class="desc-label">번호</span>
 						<span class="desc-value"><%=items[i].phone%></span>
 					</div>
 					<br/>
-					<div class="desc">
+					<div class="desc animal-target-list">
 						<span class="desc-label">대상</span>
 						<span class="desc-value">
 					<ul class="animal-type-list">
 						<%
  						var animals = items[i].animals.split(',');
 
- 						for(var i=0; i<animals.length ;i++) {
+ 						for(var j=0; j<animals.length ;j++) {
  							%>
 						<li>
-							<i class="animal-type animal-type-<%=animals[i]%>"></i>
+							<i class="animal-type animal-type-<%=animals[j]%>"></i>
 						</li>
 						<%
 						}

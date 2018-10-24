@@ -37,5 +37,7 @@ function setAnimalTab() {
  * @since 2018-10-21
  */
 function search() {
-	var animalName = document.querySelector('.animal-list li.active').innerText;
+	var type = parseInt(document.querySelector('.animal-list li.active').getAttribute("data-type"));
+
+	window.location.href = '/shop/list?type=' + type;
 }

@@ -126,3 +126,7 @@ ul.animal-type-list li {
 	float: none;
 	display: inline-block;
 }
+
+div.hospital-item .item-top {
+	height: 220px;
+}

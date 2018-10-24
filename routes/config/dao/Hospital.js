@@ -16,7 +16,7 @@ module.exports = {
 		animals: {
 			type: Sequelize.STRING(50)
 		},
-		contract: {
+		phone: {
 			type: Sequelize.STRING(50)
 		},
 		address: {

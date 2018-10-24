@@ -5,6 +5,7 @@ for (var i = 0; i < hospitalList.length; i++) {
 %>
 <div data-hospital-idx="<%= hospitalList[i].idx %>">
 	<input type="hidden" name="title" value="<%= hospitalList[i].title %>"/>
+	<input type="hidden" name="animals" value="<%= hospitalList[i].animals %>"/>
 	<input type="hidden" name="address" value="<%= hospitalList[i].address %>"/>
 	<input type="hidden" name="phone" value="<%= hospitalList[i].phone %>"/>
 	<input type="hidden" name="latitude" value="<%= hospitalList[i].latitude %>"/>
@@ -17,29 +18,29 @@ for (var i = 0; i < hospitalList.length; i++) {
 <div class="top" style="margin-top: 50px; margin-bottom: 50px;">
 	<section class="body-left">
 		<ul class="animal-list">
-			<li>
-				<i class="animal-type animal-type-2"></i>
-				<div class="animal-layer animal-layer-2">거북이</div>
-			</li>
-			<li>
-				<i class="animal-type animal-type-5"></i>
-				<div class="animal-layer animal-layer-5">고슴도치</div>
-			</li>
-			<li>
-				<i class="animal-type animal-type-6"></i>
-				<div class="animal-layer animal-layer-6">앵무새</div>
-			</li>
-			<li>
+			<li data-type="1">
 				<i class="animal-type animal-type-1"></i>
-				<div class="animal-layer animal-layer-1">토끼</div>
+				<div class="animal-layer animal-layer-1">거북이</div>
 			</li>
-			<li>
-				<i class="animal-type animal-type-4"></i>
-				<div class="animal-layer animal-layer-4">페럿</div>
+			<li data-type="2">
+				<i class="animal-type animal-type-2"></i>
+				<div class="animal-layer animal-layer-2">고슴도치</div>
 			</li>
-			<li>
+			<li data-type="3">
 				<i class="animal-type animal-type-3"></i>
-				<div class="animal-layer animal-layer-3">햄스터</div>
+				<div class="animal-layer animal-layer-3">앵무새</div>
+			</li>
+			<li data-type="4">
+				<i class="animal-type animal-type-4"></i>
+				<div class="animal-layer animal-layer-4">토끼</div>
+			</li>
+			<li data-type="5">
+				<i class="animal-type animal-type-5"></i>
+				<div class="animal-layer animal-layer-5">페럿</div>
+			</li>
+			<li data-type="6">
+				<i class="animal-type animal-type-6"></i>
+				<div class="animal-layer animal-layer-6">햄스터</div>
 			</li>
 		</ul>
 	</section>
