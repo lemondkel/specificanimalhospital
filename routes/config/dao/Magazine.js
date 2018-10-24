@@ -22,6 +22,10 @@ module.exports = {
 		images: {
 			type: Sequelize.STRING(1000)
 		},
+		type : {
+			type : Sequelize.INTEGER,
+			defaultValue : 0
+		},
 		viewCount : {
 			type : Sequelize.INTEGER,
 			defaultValue : 0
